@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>AIS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="http://mybootstrap.ru/wp-content/themes/clear-theme/styles/bootstrap.css" media="screen">
+
+		<link rel="stylesheet" href="css/teh.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://bootstrap-ru.com/204/assets/js/bootstrap-dropdown.js"></script>	
+	</head>
+	<body>
+		<div class="container">
+			<form class="form-horizontal right-part">
+				<legend>Информация о пользователе</legend>
+				<div class="control-group">
+					<label s for="userName">Имя пользователя</label>
+					<input type="text" id="userName">
+				</div>
+				<div class="control-group">
+					<div class="controls-row">
+						<label class="span2" for="depart">Отдел</label>
+						<label class="span2" for="phone">Телефон</label>
+					</div>
+					<div class="controls-row">
+						<input class="span2" type="text" id="depart">
+						<input class="span2" type="text" id="phone">
+					</div>
+				</div>
+
+				<div class="control-group">
+					<div class="controls-row">
+						<label class="span2" for="lastCall">Последнее обращение</label>
+						<label class="span2" for="statusCall">Статус обращения</label>
+					</div>
+					<div class="controls-row">
+						<input class="span2" type="text" id="lastCall">
+						<input class="span2" type="text" id="statusCall">
+					</div>
+					<div class="control-group controls-row">
+						<button class="btn btn-primary" type="submit">Добавить</button>
+						<button class="btn" type="submit">Статистика обращений</button>
+					</div>
+				</div>
+			</form>
+			<form class="form-horizontal left-part">
+			<legend>Тело заявки</legend>
+				<div class="control-group">
+					<label class="control-label" for="mainText">Текст заявки</label>
+					<div class="controls">	
+						<textarea rows="7" id="mainText"></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="department">Отдел для направления заявки</label>
+					<div class="controls">
+						<select id="department">
+							<option>Example1</option>
+							<option>Example2</option>
+							<option>Example3</option>
+						</select>
+					</div>
+				</div>
+				<!-- -->
+				<div class="control-group form-search">
+					<label class="control-label" for="userID">Пользователь</label>
+					<div class="controls">
+						 <div class="input-append">
+   							 <input type="text" class="span2 search-query">
+   							 <button type="submit" class="btn">Поиск</button>
+ 						 </div>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<button type="submit" class="btn btn-primary">Отправить</button>
+						<button type="reset" class="btn">Отмена</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,18 @@
+.container{
+	border:1px solid lightgrey;
+	margin-top: 40px;
+}
+
+.input-append .btn{
+	  box-sizing: border-box;
+	margin-left:-1px;
+}
+.right-part{
+	float:right;
+	margin: 10px;
+}
+.left-part{
+	float:left;
+	width:auto;
+	margin: 10px;
+}

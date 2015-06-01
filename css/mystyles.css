@@ -1,0 +1,108 @@
+body{
+	width:100%;
+	height:auto;
+}
+.navbar{
+	border-bottom:1px solid lightgrey;
+}
+.user-menu{
+	float:right;
+}
+.navigate{
+	margin:14px 0;
+}
+.avatar{
+	height:60px;
+	width:60px;
+	border:4px solid white;
+	border-radius: 50%; 
+}
+.form-search{
+	float:right;
+	padding-right:0;
+	padding-left:auto;
+}
+h2{
+	margin-bottom:20px;
+}
+table{
+	margin-top:40px;
+}
+
+.modal-header{
+	background-color:#33cccc;
+	color:white;
+}
+.modal-body{
+	margin:20px;
+}
+
+.controls{
+	margin-bottom:10px;
+}
+.control-group{
+	margin-bottom:5px;
+}
+#addModal .modal-dialog .modal-content .modal-body .controls input[type="radio"]{
+	display:none;
+}
+.modal input{
+	width:45%;
+}
+select{
+	width:45%;
+	height: 24px;
+	border-top: 1px solid rgb(169, 169, 169);
+}
+#priority label{
+	width:32%;
+	margin-right: 5px;
+}
+#priority label:last-child{
+	float:right;
+	margin-right:0px;
+}
+#forNameUser{
+	float:right;
+}
+#addModal #theme{
+	width:100%;
+}
+input[type="radio"]:checked+label{
+	 box-shadow: 0 0 0 1px #fff, 0 0 0 5px #049cdb;
+}
+textarea{
+	width:100%;
+}
+/*.modal .control-group .center-block button{
+	margin-right: 20px;
+}*/
+#depart{
+float:right;
+}
+label[for="depart"]{
+margin-left: 48%;
+}
+.comment{
+	border-bottom: 1px solid #333;
+}
+.comment-author{
+	display: inline-block;
+	font-size: 15px; 
+	font-weight: bold; 
+	color:#555;
+}
+.comment-date{
+	display: inline-block;
+	font-size: 11px; 
+	color: #999;
+}
+.comment-text{
+	margin-top: 5px;
+}
+.modal-body .ending{
+	margin:15px auto;
+}
+.modal-body .ending button{
+	margin-right:20px;
+}

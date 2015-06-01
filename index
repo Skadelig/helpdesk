@@ -1,0 +1,312 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>index</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="css/mystyles.css" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</head>
+	<body>
+		<div class="navbar ">
+				<div class="container">
+				<div class="user-menu btn-group">
+						  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						  	<img class="avatar" src="css/ave.jpg">
+						    User-name
+						    <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">Редактировать аккаунт</a></li>
+						    <li><a href="#">Выйти</a></li>
+						  </ul>
+					</div>
+					<div class="navigate btn-group"> 
+						<a class="btn" href="#"><span class="glyphicon glyphicon-user"></span>Пользователи</a>
+						<a class="btn" href="#"><span class="glyphicon glyphicon-tag"></span>Заявки</a>
+						<a class="btn" href="#"><span class="glyphicon glyphicon-list-alt"></span>Отчеты</a>
+						<a class="btn" href="#"><span class="glyphicon glyphicon-envelope"></span> Комментарии</a>
+					</div>					
+				</div>
+		</div>
+		<div class="main">
+			<div class="container">
+				<h2>Заявки</h2>
+				<form class="form-search">
+				  <input type="text" class="input-medium search-query">
+				  <button type="submit" class="btn">Поиск</button>
+				</form>
+
+				<button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Добавить</button>
+				<!--Изменить таблицу.  -->
+				<table class="table">
+					<tr>
+						<th>#</th>
+						<th>Тема</th>
+						<th>Пользователь</th>
+						<th>Создано</th>
+						<th>Дата заврешения</th>
+						<th>Исполнитель</th>
+						<th>Статус</th>
+						<th>Действие</th>			
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td>
+							<div class="btn-group">
+						 		<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						    Действие
+									 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								   <li>Начать</li>
+								   <li>Направить</li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td><div class="btn-group">
+						 		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+						    Действие
+									 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								   <li>Начать</li>
+								   <li>Направить</li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td><div class="btn-group">
+						 		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+						    Действие
+									 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								   <li>Начать</li>
+								   <li>Направить</li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								</ul>
+							</div>
+							</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td><div class="btn-group">
+						 		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+						    Действие
+									 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								   <li>Начать</li>
+								   <li>Направить</li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								</ul>
+							</div>
+							</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td><div class="btn-group">
+						 		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+						    Действие
+									 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+								   <li>Начать</li>
+								   <li>Направить</li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<ul class="pagination">
+					  <li><a href="#">&laquo;</a></li>
+					  <li><a href="#">1</a></li>
+					  <li><a href="#">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li><a href="#">5</a></li>
+					  <li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<div>
+		</div>
+	<!--Modal part -->
+	
+	<!-- NewModal -->
+	<!-- -->
+		<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true" >
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<button type="reset" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h4 class="modal-title">Добавить заявку </h4>
+						
+					</div>
+					<form class="modal-body">
+						<div class="control-group">
+							<label for="from">От кого</label>
+						</div>
+						<div class="controls">	
+						<!--В поле по умолчанию вставлено имя работника, который отправляет заявку в случае перенправления. Но необходимо добавить поле для источника заявки, иначе в этом поле записывается источник заявки  -->
+							<input type="text" id="from" placeholder="Техработник1">
+						</div>
+
+						<div class="control-group">
+							<label for="forName">Кому</label>
+						</div>
+						<div class="controls" id="forName">	
+							<!-- Выпадающее меню с названиями отделов-->
+							<select id="forNameDepart">
+									<option>Хозяйственный</option>
+									<option>Электрик</option>
+									<option>Информационный</option>
+							</select>
+							<input type="text" id="forNameUser" list="forNameUserList" placeholder="Имя работника">
+								<datalist id="forNameUserList">
+									<option>Иванов</option>
+									<option>Петров</option>
+									<option>Кучерявых</option>
+								</datalist>
+						</div>
+						<div class="control-group">
+							<label for="priority">Приоритет</label>
+						</div>
+						<div class="controls" id="priority">	
+							<!-- Радиобаттон!-->
+							<input type="radio" name="Priority" id="lowPriority" value="option1" checked>	
+							<label for="lowPriority" class="btn btn-success">Низкий</label>
+
+							<input type="radio" name="Priority" id="middlePriority" value="option2">
+							<label for="middlePriority" class="btn btn-warning">Средний</label>
+
+							<input type="radio" name="Priority" id="hightPriority" value="option4">
+							<label for="hightPriority" class="btn btn-danger">Высокий</label>
+						</div>
+						<!--Можно указать тип заявки. В БД есть поле для этого -->
+						<div class="control-group">
+							<label for="theme">Тема</label>
+						</div>
+						<div class="controls">	
+							<input type="text" id="theme" placeholder="Тема заявки">
+						</div>
+						<div class="control-group">
+							<label for="message">Сообщение</label>
+						</div>
+						<div class="controls">	
+						<!-- Подумать как очистить-->
+								<textarea rows="6" id="message"></textarea>
+						</div>
+						<div class="control-group ending">
+							<button type="submit" class="btn btn-primary" data-dismiss="modal">Добавить заявку 
+									<span class="glyphicon  glyphicon-plus"></span>
+								</button>
+								<button type="reset" class="btn btn-default" data-dismiss="modal">Отмена</button>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+			<!--endingTaskModal-->
+		<div class="modal fade" id="endingTaskModal" tabindex="-1" role="dialog" aria-labelledby="endingTaskLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+						<h4  class="modal-title">Завершение заявки</h4>	
+					</div>
+					<form class="modal-body form-horizontal">
+						<div class="control-group">
+							<label for="whoEnd">Кем</label>
+							<label for="depart">Отдел</label>
+						</div>
+						<div class="controls">
+							<input type="text" id="whoEnd">
+							<input type="text" id="depart">
+						</div>
+						<!--Статус -->
+						<div class="control-group">
+							<label>Статус</label>
+						</div>
+						<div class="controls clearfix">
+							<button class="btn btn-success btn-sm col-md-5" type="button" disabled="disabled">Завершено</button>
+						</div>
+						<div class="control-group ending">
+							<button type="submit" class="btn btn-primary" data-dismiss="modal">Завершить задачу</button>
+							<button type="reset" class="btn btn-default" data-dismiss="modal">Отмена</button>
+						</div>
+						<!--New Comments -->
+						<div class="control-group">
+							<label for="commentText">Новый комментарий</label>
+						</div>
+						<div class="controls">	
+								<textarea rows="2" id="commentText"></textarea>
+						</div>
+						<!-- Comments --> 
+						<div class="control-group ">
+							<label for="commention">Комментарии</label>
+						</div>
+						<div class="controls" id="commention">
+							<div class="comment">
+								<div class="comment-author">
+									<span>UserName</span>
+								</div>
+								<div class="comment-date">
+									<time>01.01.2001</time>
+								</div>
+								<div class="comment-text">
+									<p>Another text</p>
+								</div>
+							</div>
+						</div>
+						
+					</form>	
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

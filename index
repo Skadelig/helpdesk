@@ -34,9 +34,11 @@
 		<div class="main">
 			<div class="container">
 				<h2>Заявки</h2>
-				<form class="form-search">
-				  <input type="text" class="input-medium search-query">
-				  <button type="submit" class="btn">Поиск</button>
+				<form class="form-search form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control sinput-medium search-query">
+					  	<button type="submit" class="btn">Поиск</button>
+					</div>
 				</form>
 
 				<button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Добавить</button>
@@ -69,7 +71,7 @@
 								<ul class="dropdown-menu">
 								   <li>Начать</li>
 								   <li>Направить</li>
-								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Завершить</a></li>
 								</ul>
 							</div>
 						</td>
@@ -90,7 +92,7 @@
 								<ul class="dropdown-menu">
 								   <li>Начать</li>
 								   <li>Направить</li>
-								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Завершить</a></li>
 								</ul>
 							</div>
 						</td>
@@ -111,7 +113,7 @@
 								<ul class="dropdown-menu">
 								   <li>Начать</li>
 								   <li>Направить</li>
-								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Завершить</a></li>
 								</ul>
 							</div>
 							</td>
@@ -153,7 +155,7 @@
 								<ul class="dropdown-menu">
 								   <li>Начать</li>
 								   <li>Направить</li>
-								   <li><a data-toggle="modal" data-target="#endingTaskModal">Заврешить</a></li>
+								   <li><a data-toggle="modal" data-target="#endingTaskModal">Завершить</a></li>
 								</ul>
 							</div>
 						</td>

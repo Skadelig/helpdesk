@@ -18,8 +18,9 @@ class RequestsSearch extends Requests
     public function rules()
     {
         return [
+            [['Request_ID', 'Employer_ID', 'Priority_ID', 'Users_id', 'Defects_ID'], 'integer'],
             [['Request_date', 'Request_text', 'Request_FacticalDateEnding', 'Request_DataEnding'], 'safe'],
-            [['Request_ID', 'Executionstatus_ID', 'Employer_ID', 'Priority_ID', 'Users_id', 'Defects_ID'], 'integer'],
+            [['Executionstatus'], 'boolean'],
         ];
     }
 
@@ -56,9 +57,9 @@ class RequestsSearch extends Requests
         }
 
         $query->andFilterWhere([
-            'Request_date' => $this->Request_date,
             'Request_ID' => $this->Request_ID,
-            'Executionstatus_ID' => $this->Executionstatus_ID,
+            'Request_date' => $this->Request_date,
+            'Executionstatus' => $this->Executionstatus,
             'Employer_ID' => $this->Employer_ID,
             'Priority_ID' => $this->Priority_ID,
             'Users_id' => $this->Users_id,

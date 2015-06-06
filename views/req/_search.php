@@ -15,13 +15,13 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+    <?= $form->field($model, 'Request_ID') ?>
+
     <?= $form->field($model, 'Request_date') ?>
 
     <?= $form->field($model, 'Request_text') ?>
 
-    <?= $form->field($model, 'Request_ID') ?>
-
-    <?= $form->field($model, 'Executionstatus_ID') ?>
+    <?= $form->field($model, 'Executionstatus')->checkbox() ?>
 
     <?= $form->field($model, 'Employer_ID') ?>
 

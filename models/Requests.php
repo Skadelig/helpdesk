@@ -7,10 +7,10 @@ use Yii;
 /**
  * This is the model class for table "Request".
  *
+ * @property integer $Request_ID
  * @property string $Request_date
  * @property string $Request_text
- * @property integer $Request_ID
- * @property integer $Executionstatus_ID
+ * @property boolean $Executionstatus
  * @property integer $Employer_ID
  * @property integer $Priority_ID
  * @property integer $Users_id
@@ -22,7 +22,6 @@ use Yii;
  * @property Defects $defects
  * @property Employer $employer
  * @property Priority $priority
- * @property Executionstatus $executionstatus
  * @property Users $users
  */
 class Requests extends \yii\db\ActiveRecord
@@ -43,7 +42,8 @@ class Requests extends \yii\db\ActiveRecord
         return [
             [['Request_date', 'Request_FacticalDateEnding', 'Request_DataEnding'], 'safe'],
             [['Request_text'], 'string'],
-            [['Executionstatus_ID', 'Employer_ID', 'Priority_ID', 'Users_id', 'Defects_ID'], 'integer']
+            [['Executionstatus'], 'boolean'],
+            [['Employer_ID', 'Priority_ID', 'Users_id', 'Defects_ID'], 'integer']
         ];
     }
 
@@ -53,16 +53,16 @@ class Requests extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Request_date' => 'Request Date',
-            'Request_text' => 'Request Text',
-            'Request_ID' => 'Request  ID',
-            'Executionstatus_ID' => 'Executionstatus  ID',
-            'Employer_ID' => 'Employer  ID',
-            'Priority_ID' => 'Priority  ID',
-            'Users_id' => 'Users ID',
-            'Defects_ID' => 'Defects  ID',
-            'Request_FacticalDateEnding' => 'Request  Factical Date Ending',
-            'Request_DataEnding' => 'Request  Data Ending',
+            'Request_ID' => 'КОД заявки',
+            'Request_date' => 'Дата заявки',
+            'Request_text' => 'Текст заявки',
+            'Executionstatus' => 'Заявка исполнятся',
+            'Employer_ID' => 'КОД работника создателя',
+            'Priority_ID' => 'КОД приоритета',
+            'Users_id' => 'КОД исполнителя',
+            'Defects_ID' => 'КОД дефекта',
+            'Request_FacticalDateEnding' => 'Фактическая дата завершения',
+            'Request_DataEnding' => 'Предполагаемая дата завершения',
         ];
     }
 
@@ -96,14 +96,6 @@ class Requests extends \yii\db\ActiveRecord
     public function getPriority()
     {
         return $this->hasOne(Priority::className(), ['Priority_ID' => 'Priority_ID']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getExecutionstatus()
-    {
-        return $this->hasOne(Executionstatus::className(), ['Executionstatus_ID' => 'Executionstatus_ID']);
     }
 
     /**

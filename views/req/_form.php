@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Request_text')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'Executionstatus_ID')->textInput() ?>
+    <?= $form->field($model, 'Executionstatus')->checkbox() ?>
 
     <?= $form->field($model, 'Employer_ID')->textInput() ?>
 

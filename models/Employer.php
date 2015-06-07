@@ -38,8 +38,8 @@ class Employer extends \yii\db\ActiveRecord
     {
         return [
             [['Job_ID', 'Users_id', 'Department_ID'], 'integer'],
-            [['Employer_surname', 'Employer_name'], 'string'],
-            [['Employer_birthday'], 'safe']
+            [['Employer_birthday'], 'safe'],
+            [['Employer_surname', 'Employer_name'], 'string', 'max' => 256]
         ];
     }
 
@@ -49,13 +49,13 @@ class Employer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Employer_ID' => 'Employer  ID',
-            'Job_ID' => 'Job  ID',
-            'Users_id' => 'Users ID',
-            'Department_ID' => 'Department  ID',
-            'Employer_surname' => 'Employer Surname',
-            'Employer_name' => 'Employer Name',
-            'Employer_birthday' => 'Employer Birthday',
+            'Employer_ID' => 'КОД работника',
+            'Job_ID' => 'КОД должности',
+            'Users_id' => ' КОД пользователя',
+            'Department_ID' => 'КОД Департамента',
+            'Employer_surname' => 'Фамилия',
+            'Employer_name' => 'Имя',
+            'Employer_birthday' => 'День рождения',
         ];
     }
 

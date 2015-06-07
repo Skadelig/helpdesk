@@ -29,10 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Users_id',
-            'Employer_ID',
             'Access_ID',
-            'Users_login:ntext',
-            'Users_pass:ntext',
+            'Users_login',
+            //'Users_pass',
             'Users_access',
         ],
     ]) ?>

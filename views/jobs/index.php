@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\JobsSeasch */
+/* @var $searchModel app\models\JobsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Jobs';
@@ -26,8 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'Job_ID',
-            'Job_name:ntext',
-            'Job_responsibility:ntext',
+            'Job_name',
+            'Job_responsibility',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

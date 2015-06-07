@@ -12,13 +12,11 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Employer_ID')->textInput() ?>
-
     <?= $form->field($model, 'Access_ID')->textInput() ?>
 
-    <?= $form->field($model, 'Users_login')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Users_login')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Users_pass')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Users_pass')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'Users_access')->textInput() ?>
 

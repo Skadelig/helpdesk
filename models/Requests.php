@@ -8,13 +8,13 @@ use Yii;
  * This is the model class for table "Request".
  *
  * @property integer $Request_ID
- * @property string $Request_date
  * @property string $Request_text
  * @property boolean $Executionstatus
  * @property integer $Employer_ID
  * @property integer $Priority_ID
  * @property integer $Users_id
  * @property integer $Defects_ID
+ * @property string $Request_date
  * @property string $Request_FacticalDateEnding
  * @property string $Request_DataEnding
  *
@@ -40,10 +40,10 @@ class Requests extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Request_date', 'Request_FacticalDateEnding', 'Request_DataEnding'], 'safe'],
             [['Request_text'], 'string'],
             [['Executionstatus'], 'boolean'],
-            [['Employer_ID', 'Priority_ID', 'Users_id', 'Defects_ID'], 'integer']
+            [['Employer_ID', 'Priority_ID', 'Users_id', 'Defects_ID'], 'integer'],
+            [['Request_date', 'Request_FacticalDateEnding', 'Request_DataEnding'], 'safe']
         ];
     }
 
@@ -54,13 +54,13 @@ class Requests extends \yii\db\ActiveRecord
     {
         return [
             'Request_ID' => 'КОД заявки',
-            'Request_date' => 'Дата заявки',
             'Request_text' => 'Текст заявки',
             'Executionstatus' => 'Заявка исполнятся',
             'Employer_ID' => 'КОД работника создателя',
             'Priority_ID' => 'КОД приоритета',
             'Users_id' => 'КОД исполнителя',
             'Defects_ID' => 'КОД дефекта',
+            'Request_date' => 'Дата заявки',
             'Request_FacticalDateEnding' => 'Фактическая дата завершения',
             'Request_DataEnding' => 'Предполагаемая дата завершения',
         ];

@@ -8,7 +8,6 @@ use Yii;
  * This is the model class for table "Users".
  *
  * @property integer $Users_id
- * @property integer $Employer_ID
  * @property integer $Access_ID
  * @property string $Users_login
  * @property string $Users_pass
@@ -18,7 +17,6 @@ use Yii;
  * @property Employer[] $employers
  * @property Request[] $requests
  * @property Access $access
- * @property Employer $employer
  */
 class Users extends \yii\db\ActiveRecord
 {
@@ -36,9 +34,9 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Employer_ID', 'Access_ID', 'Users_access'], 'integer'],
+            [['Access_ID', 'Users_access'], 'integer'],
             [['Users_login'], 'required'],
-            [['Users_login', 'Users_pass'], 'string']
+            [['Users_login', 'Users_pass'], 'string', 'max' => 256]
         ];
     }
 
@@ -48,12 +46,11 @@ class Users extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Users_id' => 'Users ID',
-            'Employer_ID' => 'Employer  ID',
+            'Users_id' => 'КОД пользователя',
             'Access_ID' => 'Access  ID',
-            'Users_login' => 'Users Login',
-            'Users_pass' => 'Users Pass',
-            'Users_access' => 'Users Access',
+            'Users_login' => 'Логин',
+            'Users_pass' => 'Пароль',
+            'Users_access' => 'Users_access',
         ];
     }
 
@@ -87,13 +84,5 @@ class Users extends \yii\db\ActiveRecord
     public function getAccess()
     {
         return $this->hasOne(Access::className(), ['Access_ID' => 'Access_ID']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getEmployer()
-    {
-        return $this->hasOne(Employer::className(), ['Employer_ID' => 'Employer_ID']);
     }
 }

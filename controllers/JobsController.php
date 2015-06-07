@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Jobs;
-use app\models\JobsSeasch;
+use app\models\JobsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -32,7 +32,7 @@ class JobsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new JobsSeasch();
+        $searchModel = new JobsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

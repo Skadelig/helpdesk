@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use app\models\Jobs;
 
 /**
- * JobsSeasch represents the model behind the search form about `app\models\Jobs`.
+ * JobsSearch represents the model behind the search form about `app\models\Jobs`.
  */
-class JobsSeasch extends Jobs
+class JobsSearch extends Jobs
 {
     /**
      * @inheritdoc

@@ -18,9 +18,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Department_ID')->textInput() ?>
 
-    <?= $form->field($model, 'Employer_surname')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Employer_surname')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Employer_name')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Employer_name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'Employer_birthday')->textInput() ?>
 

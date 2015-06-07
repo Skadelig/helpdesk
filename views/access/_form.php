@@ -12,25 +12,23 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Access_ID')->textInput() ?>
+    <?= $form->field($model, 'Access_nm')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Access_nm')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Access_ctrl')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_ctrl')->textInput() ?>
+    <?= $form->field($model, 'Access_redirect')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_redirect')->textInput() ?>
+    <?= $form->field($model, 'Access_deprt')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_deprt')->textInput() ?>
+    <?= $form->field($model, 'Access_prvt')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_prvt')->textInput() ?>
+    <?= $form->field($model, 'Access_otherusr')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_otherusr')->textInput() ?>
+    <?= $form->field($model, 'Access_othrdeprt')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_othrdeprt')->textInput() ?>
+    <?= $form->field($model, 'Access_statis')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_statis')->textInput() ?>
-
-    <?= $form->field($model, 'Access_comnt')->textInput() ?>
+    <?= $form->field($model, 'Access_comnt')->checkbox() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Job_ID',
-            'Job_name:ntext',
-            'Job_responsibility:ntext',
+            'Job_name',
+            'Job_responsibility',
         ],
     ]) ?>
 

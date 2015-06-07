@@ -18,8 +18,9 @@ class AccessSearch extends Access
     public function rules()
     {
         return [
-            [['Access_ID', 'Access_ctrl', 'Access_redirect', 'Access_deprt', 'Access_prvt', 'Access_otherusr', 'Access_othrdeprt', 'Access_statis', 'Access_comnt'], 'integer'],
+            [['Access_ID'], 'integer'],
             [['Access_nm'], 'safe'],
+            [['Access_ctrl', 'Access_redirect', 'Access_deprt', 'Access_prvt', 'Access_otherusr', 'Access_othrdeprt', 'Access_statis', 'Access_comnt'], 'boolean'],
         ];
     }
 

@@ -17,19 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Request_ID') ?>
 
-    <?= $form->field($model, 'Request_date') ?>
-
     <?= $form->field($model, 'Request_text') ?>
 
     <?= $form->field($model, 'Executionstatus')->checkbox() ?>
 
     <?= $form->field($model, 'Employer_ID') ?>
 
-    <?php // echo $form->field($model, 'Priority_ID') ?>
+    <?= $form->field($model, 'Priority_ID') ?>
 
     <?php // echo $form->field($model, 'Users_id') ?>
 
     <?php // echo $form->field($model, 'Defects_ID') ?>
+
+    <?php // echo $form->field($model, 'Request_date') ?>
 
     <?php // echo $form->field($model, 'Request_FacticalDateEnding') ?>
 

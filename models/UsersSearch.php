@@ -18,7 +18,7 @@ class UsersSearch extends Users
     public function rules()
     {
         return [
-            [['Users_id', 'Employer_ID', 'Access_ID', 'Users_access'], 'integer'],
+            [['Users_id', 'Access_ID', 'Users_access'], 'integer'],
             [['Users_login', 'Users_pass'], 'safe'],
         ];
     }
@@ -57,7 +57,6 @@ class UsersSearch extends Users
 
         $query->andFilterWhere([
             'Users_id' => $this->Users_id,
-            'Employer_ID' => $this->Employer_ID,
             'Access_ID' => $this->Access_ID,
             'Users_access' => $this->Users_access,
         ]);

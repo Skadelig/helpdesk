@@ -24,15 +24,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'Request_ID',
-            'Request_date',
+            [
+                'attribute'=>'Employer_ID',
+                'value'=>'employer.Employer_surname'
+            ],
             'Request_text:ntext',
             'Executionstatus:boolean',
-            'Employer_ID',
-            // 'Priority_ID',
+            
+            'Priority_ID',
             // 'Users_id',
             // 'Defects_ID',
+            // 'Request_date',
             // 'Request_FacticalDateEnding',
             // 'Request_DataEnding',
 

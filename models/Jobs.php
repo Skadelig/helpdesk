@@ -29,7 +29,7 @@ class Jobs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Job_name', 'Job_responsibility'], 'string']
+            [['Job_name', 'Job_responsibility'], 'string', 'max' => 256]
         ];
     }
 
@@ -39,9 +39,9 @@ class Jobs extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Job_ID' => 'Job  ID',
-            'Job_name' => 'Job Name',
-            'Job_responsibility' => 'Job Responsibility',
+            'Job_ID' => 'КОД должности',
+            'Job_name' => 'Название должности',
+            'Job_responsibility' => 'Job_responsibility',
         ];
     }
 

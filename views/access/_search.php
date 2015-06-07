@@ -19,21 +19,21 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Access_nm') ?>
 
-    <?= $form->field($model, 'Access_ctrl') ?>
+    <?= $form->field($model, 'Access_ctrl')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_redirect') ?>
+    <?= $form->field($model, 'Access_redirect')->checkbox() ?>
 
-    <?= $form->field($model, 'Access_deprt') ?>
+    <?= $form->field($model, 'Access_deprt')->checkbox() ?>
 
-    <?php // echo $form->field($model, 'Access_prvt') ?>
+    <?php // echo $form->field($model, 'Access_prvt')->checkbox() ?>
 
-    <?php // echo $form->field($model, 'Access_otherusr') ?>
+    <?php // echo $form->field($model, 'Access_otherusr')->checkbox() ?>
 
-    <?php // echo $form->field($model, 'Access_othrdeprt') ?>
+    <?php // echo $form->field($model, 'Access_othrdeprt')->checkbox() ?>
 
-    <?php // echo $form->field($model, 'Access_statis') ?>
+    <?php // echo $form->field($model, 'Access_statis')->checkbox() ?>
 
-    <?php // echo $form->field($model, 'Access_comnt') ?>
+    <?php // echo $form->field($model, 'Access_comnt')->checkbox() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

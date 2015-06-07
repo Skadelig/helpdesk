@@ -29,7 +29,7 @@ class Department extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Department_name', 'Department_number'], 'string']
+            [['Department_name', 'Department_number'], 'string', 'max' => 256]
         ];
     }
 
@@ -39,9 +39,9 @@ class Department extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Department_ID' => 'Department  ID',
-            'Department_name' => 'Department Name',
-            'Department_number' => 'Department Number',
+            'Department_ID' => 'КОД департамента',
+            'Department_name' => 'Название департамента',
+            'Department_number' => 'Номер департамента',
         ];
     }
 

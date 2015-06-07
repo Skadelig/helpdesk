@@ -9,14 +9,14 @@ use Yii;
  *
  * @property integer $Access_ID
  * @property string $Access_nm
- * @property integer $Access_ctrl
- * @property integer $Access_redirect
- * @property integer $Access_deprt
- * @property integer $Access_prvt
- * @property integer $Access_otherusr
- * @property integer $Access_othrdeprt
- * @property integer $Access_statis
- * @property integer $Access_comnt
+ * @property boolean $Access_ctrl
+ * @property boolean $Access_redirect
+ * @property boolean $Access_deprt
+ * @property boolean $Access_prvt
+ * @property boolean $Access_otherusr
+ * @property boolean $Access_othrdeprt
+ * @property boolean $Access_statis
+ * @property boolean $Access_comnt
  *
  * @property Users[] $users
  */
@@ -36,9 +36,8 @@ class Access extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Access_ID'], 'required'],
-            [['Access_ID', 'Access_ctrl', 'Access_redirect', 'Access_deprt', 'Access_prvt', 'Access_otherusr', 'Access_othrdeprt', 'Access_statis', 'Access_comnt'], 'integer'],
-            [['Access_nm'], 'string']
+            [['Access_ctrl', 'Access_redirect', 'Access_deprt', 'Access_prvt', 'Access_otherusr', 'Access_othrdeprt', 'Access_statis', 'Access_comnt'], 'boolean'],
+            [['Access_nm'], 'string', 'max' => 256]
         ];
     }
 
@@ -48,16 +47,16 @@ class Access extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Access_ID' => 'Access  ID',
-            'Access_nm' => 'Access Nm',
-            'Access_ctrl' => 'Access Ctrl',
-            'Access_redirect' => 'Access Redirect',
-            'Access_deprt' => 'Access Deprt',
-            'Access_prvt' => 'Access Prvt',
-            'Access_otherusr' => 'Access Otherusr',
-            'Access_othrdeprt' => 'Access Othrdeprt',
-            'Access_statis' => 'Access Statis',
-            'Access_comnt' => 'Access Comnt',
+            'Access_ID' => 'КОД пользователя',
+            'Access_nm' => 'Название доступа',
+            'Access_ctrl' => 'Управление завками',
+            'Access_redirect' => 'Перенаправление',
+            'Access_deprt' => 'Доступ к департаменту',
+            'Access_prvt' => 'Просмотр личных заявок',
+            'Access_otherusr' => 'Просмотр заявок отдела',
+            'Access_othrdeprt' => 'Перенаправление заявок в другой отдел',
+            'Access_statis' => 'Доступ к с татитстике',
+            'Access_comnt' => 'Доступ к комментариям',
         ];
     }
 

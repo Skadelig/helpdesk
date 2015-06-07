@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Priority */
 
-$this->title = 'Update Priority: ' . ' ' . $model->Priority_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Priorities', 'url' => ['index']];
+$this->title = 'Обновить список приоритетов: ' . ' ' . $model->Priority_ID;
+$this->params['breadcrumbs'][] = ['label' => 'Приоритет заявок', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->Priority_ID, 'url' => ['view', 'id' => $model->Priority_ID]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

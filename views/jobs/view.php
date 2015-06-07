@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Jobs */
 
 $this->title = $model->Job_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Jobs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Должности', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="jobs-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->Job_ID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->Job_ID], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->Job_ID], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->Job_ID], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены, что хотите удалить это?',
                 'method' => 'post',
             ],
         ]) ?>

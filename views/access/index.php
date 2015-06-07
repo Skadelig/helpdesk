@@ -21,15 +21,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'Access_ID',
             'Access_nm',
-            'Access_ctrl:boolean',
-            'Access_redirect:boolean',
-            'Access_deprt:boolean',
+            //'Access_ctrl:boolean',
+            //'Access_redirect:boolean',
+            // 'Access_deprt:boolean',
             // 'Access_prvt:boolean',
             // 'Access_otherusr:boolean',
             // 'Access_othrdeprt:boolean',

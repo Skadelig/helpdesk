@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+use app\models\Requests;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CommentsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -26,7 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'Comment_ID',
-            'Request_ID',
+            [
+                'attribute'=>'Request_ID',
+                'value'=>'request.Request_text'
+            ],
             'Users_id',
             'Comment_date',
             'Comment_txt:ntext',

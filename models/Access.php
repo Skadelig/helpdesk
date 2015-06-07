@@ -47,8 +47,8 @@ class Access extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Access_ID' => 'КОД1 пользователя',
-            'Access_nm' => 'Название доступа',
+            'Access_ID' => 'КОД роли',
+            'Access_nm' => 'Название роли',
             'Access_ctrl' => 'Управление завками',
             'Access_redirect' => 'Перенаправление',
             'Access_deprt' => 'Доступ к департаменту',

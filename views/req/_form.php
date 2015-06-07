@@ -7,6 +7,8 @@ use app\models\Employer;
 use app\models\Priority;
 use app\models\Users;
 use app\models\Defects;
+use kartik\datetime\DateTimePicker;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Requests */
 /* @var $form yii\widgets\ActiveForm */
@@ -34,10 +36,18 @@ use app\models\Defects;
         ArrayHelper::map(Defects::find()->all(),"Defects_ID","Defects_nm")
     ) ?>
 
-    <?= $form->field($model, 'Request_date')->textInput() ?>
+    <?= $form->field($model, 'Request_date')->widget(DateTimePicker::classname(), 
+        [
+            'options' => ['placeholder' => 'Дата заявки'],
+            'pluginOptions' => 
+                [
+                    'autoclose'=>true,
+                    'format'=>"d.m.yyyy HH:ii "
+                ]
+        ])?>
 
     <?= $form->field($model, 'Request_FacticalDateEnding')->textInput() ?>
-
+   
     <?= $form->field($model, 'Request_DataEnding')->textInput() ?>
 
     <div class="form-group">

@@ -50,7 +50,7 @@ class Users extends \yii\db\ActiveRecord
             'Access_ID' => 'Access  ID',
             'Users_login' => 'Логин',
             'Users_pass' => 'Пароль',
-            'Users_access' => 'Users_access',
+            'Users_access' => 'Роль пользователя',
         ];
     }
 

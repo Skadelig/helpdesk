@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use app\models\Access;
+use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model app\models\Users */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,7 +13,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Access_ID')->textInput() ?>
+    <?= $form->field($model, 'Access_ID')->dropDownList(
+        ArrayHelper::map(Access::find()->all(),"Access_ID","Access_nm")
+    ) ?>
 
     <?= $form->field($model, 'Users_login')->textInput(['maxlength' => true]) ?>
 

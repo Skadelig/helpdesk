@@ -78,9 +78,9 @@ class Employer extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getJob()
+    public function getJobs()
     {
-        return $this->hasOne(Job::className(), ['Job_ID' => 'Job_ID']);
+        return $this->hasOne(Jobs::className(), ['Job_ID' => 'Job_ID']);
     }
 
     /**

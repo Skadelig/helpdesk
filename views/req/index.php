@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+use app\models\Priority;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\RequestsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -42,8 +42,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             'Request_text:ntext',
             'Executionstatus:boolean',
-            
-            'Priority_ID',
+            [
+                'attribute'=>  'Priority_ID',
+                'value'=> 'priority.Priority_nm'
+            ],
+          
             // 'Users_id',
             // 'Defects_ID',
             // 'Request_date',

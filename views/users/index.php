@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
+use app\models\Access;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\UsersSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -26,10 +27,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'Users_id',
-            'Access_ID',
+            [
+                'attribute'=>'Access_ID',
+                'value'=>'access.Access_nm'
+            ],
+            
             'Users_login',
           //  'Users_pass',
-            'Users_access',
+          //  'Users_access',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use app\models\Requests;
+use app\models\Users;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CommentsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -30,7 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'Request_ID',
                 'value'=>'request.Request_text'
             ],
-            'Users_id',
+            [
+                'attribute'=>'Users_id',
+                'value'=>'users.Users_login'
+            ],
             'Comment_date',
             'Comment_txt:ntext',
 

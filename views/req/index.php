@@ -11,7 +11,19 @@ $this->title = 'Заявки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="requests-index">
+<div class="col-lg-12">
+                <?= Html::a('Заявки', ['req/index']) ?>+
+                <?= Html::a('Роли', ['access/index']) ?>
+                <?= Html::a('Комментарии', ['comments/index']) ?>+
+                <?= Html::a('Дефекты', ['defects/index']) ?>+
+                <?= Html::a('Отделы', ['department/index']) ?>+
+                <?= Html::a('Сотрудники', ['employer/index']) ?>+
+                <?= Html::a('Должности', ['jobs/index']) ?>+
+                <?= Html::a('Приоритет', ['priority/index']) ?>+
+               
+                <?= Html::a('Пользователи', ['users/index']) ?>+
 
+            </div>
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 

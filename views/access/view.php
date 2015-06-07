@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Access */
 
 $this->title = $model->Access_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Accesses', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Роли', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="access-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->Access_ID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->Access_ID], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->Access_ID], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->Access_ID], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены, что хотите это удалить?',
                 'method' => 'post',
             ],
         ]) ?>

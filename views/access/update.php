@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model app\models\Access */
 
 $this->title = 'Update Access: ' . ' ' . $model->Access_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Accesses', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Роли', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->Access_ID, 'url' => ['view', 'id' => $model->Access_ID]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="access-update">
 

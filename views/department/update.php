@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model app\models\Department */
 
 $this->title = 'Update Department: ' . ' ' . $model->Department_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Departments', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Отделы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->Department_ID, 'url' => ['view', 'id' => $model->Department_ID]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="department-update">
 

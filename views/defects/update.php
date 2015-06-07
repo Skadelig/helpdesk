@@ -8,7 +8,7 @@ use yii\helpers\Html;
 $this->title = 'Редактировать Дефект №: ' . ' ' . $model->Defects_ID;
 $this->params['breadcrumbs'][] = ['label' => 'Дефекты', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->Defects_ID, 'url' => ['view', 'id' => $model->Defects_ID]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="defects-update">
 

@@ -57,7 +57,7 @@ class Comments extends \yii\db\ActiveRecord
      */
     public function getRequest()
     {
-        return $this->hasOne(Request::className(), ['Request_ID' => 'Request_ID']);
+        return $this->hasOne(Requests::className(), ['Request_ID' => 'Request_ID']);
     }
 
     /**

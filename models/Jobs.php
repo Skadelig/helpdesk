@@ -41,7 +41,7 @@ class Jobs extends \yii\db\ActiveRecord
         return [
             'Job_ID' => 'КОД должности',
             'Job_name' => 'Название должности',
-            'Job_responsibility' => 'Job_responsibility',
+            'Job_responsibility' => 'Обязанности',
         ];
     }
 

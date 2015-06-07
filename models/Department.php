@@ -40,8 +40,8 @@ class Department extends \yii\db\ActiveRecord
     {
         return [
             'Department_ID' => 'КОД департамента',
-            'Department_name' => 'Название департамента',
-            'Department_number' => 'Номер департамента',
+            'Department_name' => 'Название отдела',
+            'Department_number' => 'Телефон отдела',
         ];
     }
 

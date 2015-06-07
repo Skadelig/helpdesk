@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use kartik\datetime\DateTimePicker;
 /* @var $this yii\web\View */
 /* @var $model app\models\Comments */
 /* @var $form yii\widgets\ActiveForm */
@@ -16,7 +16,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Users_id')->textInput() ?>
 
-    <?= $form->field($model, 'Comment_date')->textInput() ?>
+    <!--<?= $form->field($model, 'Comment_date')->textInput() ?> -->
+    <?= $form->field($model, 'Comment_date')->widget(DateTimePicker::classname(), 
+        [
+            'options' => ['placeholder' => 'Дата заявки'],
+            'pluginOptions' => 
+                [
+                    'autoclose'=>true,
+                    'format'=>"yyyy.m.d HH:ii "
+                ]
+        ])?>
 
     <?= $form->field($model, 'Comment_txt')->textarea(['rows' => 6]) ?>
 

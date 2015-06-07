@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Users */
 
 $this->title = $model->Users_id;
-$this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Пользователи', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="users-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->Users_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->Users_id], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->Users_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->Users_id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены, что хотите удалить это?',
                 'method' => 'post',
             ],
         ]) ?>

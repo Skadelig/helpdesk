@@ -7,15 +7,15 @@ $this->title = 'My Yii Application';
         <div class="row">
             <div class="col-lg-12">
                 <?= Html::a('Заявки', ['req/index']) ?>+<br>
-                <?= Html::a('access', ['access/index']) ?><br>
-                <?= Html::a('comments', ['comments/index']) ?>+<br>
-                <?= Html::a('defects', ['defects/index']) ?>+<br>
-                <?= Html::a('department', ['department/index']) ?>+<br>
-                <?= Html::a('employer', ['employer/index']) ?>+<br>
-                <?= Html::a('jobs', ['jobs/index']) ?>+<br>
-                <?= Html::a('priority', ['priority/index']) ?>+<br>
+                <?= Html::a('Роли', ['access/index']) ?><br>
+                <?= Html::a('Комментарии', ['comments/index']) ?>+<br>
+                <?= Html::a('Дефекты', ['defects/index']) ?>+<br>
+                <?= Html::a('Отделы', ['department/index']) ?>+<br>
+                <?= Html::a('Сотрудники', ['employer/index']) ?>+<br>
+                <?= Html::a('Должности', ['jobs/index']) ?>+<br>
+                <?= Html::a('Приоритет', ['priority/index']) ?>+<br>
                
-                <?= Html::a('users', ['users/index']) ?>+<br>
+                <?= Html::a('Пользователи', ['users/index']) ?>+<br>
 
             </div>
         </div>

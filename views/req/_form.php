@@ -42,13 +42,29 @@ use kartik\datetime\DateTimePicker;
             'pluginOptions' => 
                 [
                     'autoclose'=>true,
-                    'format'=>"d.m.yyyy HH:ii "
+                    'format'=>"yyyy.m.d HH:ii "
                 ]
         ])?>
 
-    <?= $form->field($model, 'Request_FacticalDateEnding')->textInput() ?>
+    <?= $form->field($model, 'Request_FacticalDateEnding')->widget(DateTimePicker::classname(), 
+        [
+            'options' => ['placeholder' => 'Фактическое заверешние'],
+            'pluginOptions' => 
+                [
+                    'autoclose'=>true,
+                    'format'=>"yyyy.m.d HH:ii "
+                ]
+        ])?>
    
-    <?= $form->field($model, 'Request_DataEnding')->textInput() ?>
+    <?= $form->field($model, 'Request_DataEnding')->widget(DateTimePicker::classname(), 
+        [
+            'options' => ['placeholder' => 'Дата предполагаемого завершения'],
+            'pluginOptions' => 
+                [
+                    'autoclose'=>true,
+                    'format'=>"yyyy.m.d HH:ii "
+                ]
+        ])?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Обновить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

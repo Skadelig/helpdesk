@@ -46,7 +46,7 @@ class LoginForm extends Model
             $user = $this->getUsers();
 
             if (!$user || !$user->validatePassword($this->Users_pass)) {
-                $this->addError($attribute, 'Incorrect Users_login or Users_pass.');
+                $this->addError($attribute, 'Неправильный логин или пароль.');
             }
         }
     }

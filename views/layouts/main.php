@@ -4,6 +4,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\layout\css;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -19,10 +20,33 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="stylesheet" href="css/mystyles.css" type="text/css">
+
 </head>
 <body>
 
 <?php $this->beginBody() ?>
+<!--<div class="navbar ">
+                <div class="container">
+                <div class="user-menu btn-group">
+                          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                            <img class="avatar" src="css/ave.jpg">
+                            User-name
+                            <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Редактировать аккаунт</a></li>
+                            <li><a href="#">Выйти</a></li>
+                          </ul>
+                    </div>
+                    <div class="navigate btn-group"> 
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-user"></span>Пользователи</a>
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-tag"></span>Заявки</a>
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-list-alt"></span>Отчеты</a>
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-envelope"></span> Комментарии</a>
+                    </div>                  
+                </div>
+        </div> -->
     <div class="wrap">
         <?php
             NavBar::begin([
@@ -31,6 +55,8 @@ AppAsset::register($this);
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
+                
+
             ]);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
@@ -50,12 +76,32 @@ AppAsset::register($this);
             ]);
             NavBar::end();
         ?>
-
+        <div class="container"><div class="navbar ">
+                <div class="user-menu btn-group">
+                          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                            <img class="avatar" src="css/ave.jpg">
+                            User-name
+                            <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Редактировать аккаунт</a></li>
+                            <li><a href="#">Выйти</a></li>
+                          </ul>
+                    </div>
+                    <div class="navigate btn-group"> 
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-user"></span>Пользователи</a>
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-tag"></span>Заявки</a>
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-list-alt"></span>Отчеты</a>
+                        <a class="btn" href="#"><span class="glyphicon glyphicon-envelope"></span> Комментарии</a>
+                    </div>                  
+               
+        </div> </div>
         <div class="container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= $content ?>
+            
         </div>
     </div>
 

@@ -26,7 +26,11 @@ $this->title = 'Заявки';
         
         <div class="row">
             <div class="col-lg-12">
-                
+                <?php 
+                    if(Yii::$app->session->hasFlash('d')){
+                        echo "true1";
+                    }
+                ?>
 
             </div>
             

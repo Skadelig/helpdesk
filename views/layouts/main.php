@@ -36,11 +36,14 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'Домой', 'url' => ['/site/index']],
-                    ['label' => 'О нас', 'url' => ['/site/about']],
+                    Yii::$app->user->isGuest ?
+                    ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
                     ['label' => 'Контакты', 'url' => ['/site/contact']],
                     Yii::$app->user->isGuest ?
                         ['label' => 'Войти в систему', 'url' => ['/site/login']] :
-                        ['label' => 'Покинуть систему (' . Yii::$app->user->identity->username . ')',
+                        ['label' => 'Покинуть систему ',
+                        // ['label' => 'Покинуть систему (' . Yii::$app->users->identity->username . ')',
+
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],

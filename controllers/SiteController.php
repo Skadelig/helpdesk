@@ -9,6 +9,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignupForm;
+use app\models\Requests;
+use app\models\RequestsSearch;
 
 class SiteController extends Controller
 {
@@ -56,6 +58,13 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        $searchModel = new RequestsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
         return $this->render('index');
     }
 

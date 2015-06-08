@@ -1,7 +1,10 @@
 <?php
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Priority;
 /* @var $this yii\web\View */
+/* @var $searchModel app\models\RequestsSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
 $this->title = 'Заявки';
 ?>
 <div class="site-index">
@@ -38,7 +41,31 @@ $this->title = 'Заявки';
                         echo "true1";
                     }
                 ?>
+                <?= GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'filterModel' => $searchModel,
+                    'columns' => [
+                        ['class' => 'yii\grid\SerialColumn'],
+                        [
+                            'attribute'=>'Employer_ID',
+                            'value'=>'employer.Employer_surname'
+                        ],
+                        'Request_text:ntext',
+                        'Executionstatus:boolean',
+                        [
+                            'attribute'=>  'Priority_ID',
+                            'value'=> 'priority.Priority_nm'
+                        ],
+                      
+                        // 'Users_id',
+                        // 'Defects_ID',
+                        // 'Request_date',
+                        // 'Request_FacticalDateEnding',
+                        // 'Request_DataEnding',
 
+                        ['class' => 'yii\grid\ActionColumn'],
+                    ],
+                ]); ?>
             </div>
             
         </div>

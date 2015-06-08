@@ -41,7 +41,9 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'Домой', 'url' => ['/site/index']],
-                    ['label' => 'Комментарии', 'url' => ['/comments/index']],
+                    Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Заявки', 'url' => ['/req/index']],
+                    Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Сотрудники', 'url' => ['/employer/index']],
+                    Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Комментарии', 'url' => ['/comments/index']],
                     Yii::$app->user->isGuest ?
                     ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
                      Yii::$app->user->isGuest ?

@@ -32,6 +32,20 @@ class LoginForm extends Model
             ['Users_pass', 'validateUsers_pass'],
         ];
     }
+  public function attributeLabels()
+    {
+        return [
+            'Users_id' => 'КОД пользователя',
+            'Access_ID' => 'Уровень доступа',
+            'Users_login' => 'Логин',
+            'Users_pass' => 'Пароль',
+//          'Users_access' => 'Роль пользователя',
+            'Users_auth_key' => 'ключ авторизации',
+            'Users_email_confirm_token' => 'Users Email Confirm Token',
+            'rememberMe' => 'Запомнить меня',
+            
+        ];
+    }
 
     /**
      * Validates the Users_pass.

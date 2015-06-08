@@ -29,7 +29,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'Моя компания',
+                'brandLabel' => 'HelpDesk',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -44,8 +44,7 @@ AppAsset::register($this);
                     ['label' => 'Комментарии', 'url' => ['/comments/index']],
                     Yii::$app->user->isGuest ?
                     ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
-                    ['label' => 'Контакты', 'url' => ['/site/contact']],
-                    Yii::$app->user->isGuest ?
+                     Yii::$app->user->isGuest ?
                         ['label' => 'Войти в систему',  'url' => ['/site/login']] :
                         ['label' => 'Покинуть систему ',
                         // ['label' => 'Покинуть систему (' . Yii::$app->users->identity->username . ')',
@@ -68,7 +67,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+            <p class="pull-left">&copy; HelpDesk <?= date('Y') ?></p>
             <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>

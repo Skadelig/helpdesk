@@ -7,6 +7,10 @@ $this->title = 'Заявки';
 <div class="site-index">
         <div class="row">
             <div class="col-lg-12">
+           <?php if(Yii::$app->user->isGuest){
+
+            }else{
+                ?>
                 <?= Html::a('Заявки', ['req/index']) ?>+<br>
                 <?= Html::a('Роли', ['access/index']) ?><br>
                 <?= Html::a('Комментарии', ['comments/index']) ?>+<br>
@@ -17,6 +21,9 @@ $this->title = 'Заявки';
                 <?= Html::a('Приоритет', ['priority/index']) ?>+<br>
                
                 <?= Html::a('Пользователи', ['users/index']) ?>+<br>
+                <?php
+            }?>
+           
 
             </div>
         </div>

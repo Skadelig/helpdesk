@@ -11,7 +11,7 @@ $this->title = 'Заявки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="requests-index">
-<div class="col-lg-12">
+<!--<div class="col-lg-12">
                 <?= Html::a('Заявки', ['req/index']) ?>+
                 <?= Html::a('Роли', ['access/index']) ?>
                 <?= Html::a('Комментарии', ['comments/index']) ?>+
@@ -20,15 +20,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= Html::a('Сотрудники', ['employer/index']) ?>+
                 <?= Html::a('Должности', ['jobs/index']) ?>+
                 <?= Html::a('Приоритет', ['priority/index']) ?>+
-               
                 <?= Html::a('Пользователи', ['users/index']) ?>+
 
-            </div>
+            </div>-->
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <p>
-        <?= Html::a('Создать заявку', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать заявку', ['create'], ['class' => 'btn btn btn-primary']) ?>
     </p>
 
     <?= GridView::widget([

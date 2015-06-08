@@ -45,8 +45,8 @@ class Comments extends \yii\db\ActiveRecord
     {
         return [
             'Comment_ID' => 'КОД комментария',
-            'Request_ID' => 'КОД заявки',
-            'Users_id' => 'Код пользователя',
+            'Request_ID' => 'Тема заявки',
+            'Users_id' => 'Имя пользователя',
             'Comment_date' => 'Дата',
             'Comment_txt' => 'Текст комментария',
         ];

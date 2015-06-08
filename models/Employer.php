@@ -51,7 +51,7 @@ class Employer extends \yii\db\ActiveRecord
         return [
             'Employer_ID' => 'КОД работника',
             'Job_ID' => 'Должность',
-            'Users_id' => ' КОД пользователя',
+            'Users_id' => ' Логин',
             'Department_ID' => 'Отдел',
             'Employer_surname' => 'Фамилия',
             'Employer_name' => 'Имя',

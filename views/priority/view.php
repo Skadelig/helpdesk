@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Priority */
 
-$this->title = $model->Priority_ID;
+$this->title = $model->Priority_nm;
 $this->params['breadcrumbs'][] = ['label' => 'Приоритет заявок', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

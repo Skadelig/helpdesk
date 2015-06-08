@@ -42,7 +42,8 @@ use kartik\datetime\DateTimePicker;
             'pluginOptions' => 
                 [
                     'autoclose'=>true,
-                    'format'=>"yyyy.m.d HH:ii "
+                    'value' => '8-Jun-2015 00:00',
+                    'format'=>"dd-mm-yyyy HH:ii"
                 ]
         ])?>
 
@@ -52,7 +53,8 @@ use kartik\datetime\DateTimePicker;
             'pluginOptions' => 
                 [
                     'autoclose'=>true,
-                    'format'=>"yyyy.m.d HH:ii "
+                     'value' => '8-Jun-2015 01:00',
+                    'format'=>"dd-mm-yyyy HH:ii"
                 ]
         ])?>
    
@@ -62,7 +64,8 @@ use kartik\datetime\DateTimePicker;
             'pluginOptions' => 
                 [
                     'autoclose'=>true,
-                    'format'=>"yyyy.m.d HH:ii "
+                    'value' => '8-Jun-2015 01:00',
+                    'format'=>"dd-mm-yyyy HH:ii"
                 ]
         ])?>
 

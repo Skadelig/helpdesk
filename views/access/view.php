@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Access */
 
-$this->title = $model->Access_ID;
+$this->title = $model->Access_nm;
 $this->params['breadcrumbs'][] = ['label' => 'Роли', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -6,7 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Employer */
 
-$this->title = $model->Employer_ID;
+//$this->title = $model->'Фамилия';
+$this->title = $model->Employer_name.' '.$model->Employer_surname;
 $this->params['breadcrumbs'][] = ['label' => 'Сотрудники', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

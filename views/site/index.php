@@ -40,7 +40,7 @@ $this->title = 'Заявки';
             <div class="col-lg-12">
                 <?php 
                     if(Yii::$app->session->hasFlash('d')){
-                        echo "true1";
+                        /*echo "true1";*/
                     }
                 ?>
                 <?= GridView::widget([

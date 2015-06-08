@@ -14,9 +14,9 @@ $this->title = 'Заявки';
                  
             }else{
                 ?>
-                <?= Html::a('Заявки', ['req/index']) ?>+<br>
-                 <?= Html::a('Комментарии', ['comments/index']) ?>+<br>
-                 <?= Html::a('Сотрудники', ['employer/index']) ?>+<br>
+                <?= Html::a('Заявки', ['req/index'],['class'=>'btn btn-success']) ?>
+                 <?= Html::a('Комментарии', ['comments/index'],['class'=>'btn btn-info']) ?>
+                 <?= Html::a('Сотрудники', ['employer/index'],['class'=>'btn btn-warning']) ?>
                  <!--
                 <?= Html::a('Роли', ['access/index']) ?><br>
                 <?= Html::a('Дефекты', ['defects/index']) ?>+<br>
@@ -39,35 +39,11 @@ $this->title = 'Заявки';
         <div class="row">
             <div class="col-lg-12">
                 <?php 
-                    if(Yii::$app->session->hasFlash('d')){
-                        echo "true1";
-                    }
+                    if(Yii::$app->user->isGuest){
+                      echo  Html::a('Войдите в систему', ['site/login'],['class'=>'btn btn-success']) ;
+                    }else{
+                } 
                 ?>
-                <?= GridView::widget([
-                    'dataProvider' => $dataProvider,
-                    'filterModel' => $searchModel,
-                    'columns' => [
-                        ['class' => 'yii\grid\SerialColumn'],
-                        [
-                            'attribute'=>'Employer_ID',
-                            'value'=>'employer.Employer_surname'
-                        ],
-                        'Request_text:ntext',
-                        'Executionstatus:boolean',
-                        [
-                            'attribute'=>  'Priority_ID',
-                            'value'=> 'priority.Priority_nm'
-                        ],
-                      
-                        // 'Users_id',
-                        // 'Defects_ID',
-                        // 'Request_date',
-                        // 'Request_FacticalDateEnding',
-                        // 'Request_DataEnding',
-
-                        ['class' => 'yii\grid\ActionColumn'],
-                    ],
-                ]); ?>
             </div>
             
         </div>

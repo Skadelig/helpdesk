@@ -45,7 +45,7 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
             self::STATUS_WAIT => 'Ожидает подтверждения',
         ];
     }
-
+  
     /**
      * @inheritdoc
      */

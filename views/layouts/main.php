@@ -44,6 +44,19 @@ AppAsset::register($this);
                     Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Заявки', 'url' => ['/req/index']],
                     Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Сотрудники', 'url' => ['/employer/index']],
                     Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Комментарии', 'url' => ['/comments/index']],
+                    Yii::$app->user->isGuest ?['label'=>' ']:[
+                        'label' => 'Настройки',
+                        'items' => [
+                             ['label' => 'Роли', 'url' => ['access/index']],
+                             ['label' => 'Дефекты', 'url' => ['defects/index']],
+                             ['label' => 'Отделы', 'url' => ['department/index']],
+                             ['label' => 'Должности', 'url' => ['jobs/index']],
+                             ['label' => 'Приоритет', 'url' => ['priority/index']],
+                             ['label' => 'Пользователи', 'url' => ['users/index']],
+                        
+                             
+                        ],
+                    ],
                     Yii::$app->user->isGuest ?
                     ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
                      Yii::$app->user->isGuest ?

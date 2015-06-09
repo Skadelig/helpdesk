@@ -19,7 +19,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Создать комментарий', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -35,7 +34,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'Users_id',
                 'value'=>'users.Users_login'
             ],
-            'Comment_date',
+            [
+                'attribute'=>'Comment_date',
+                'format' => ['date', 'php:d.m.Y h:i:s']
+            ],
+           
+            
             'Comment_txt:ntext',
 
             ['class' => 'yii\grid\ActionColumn'],

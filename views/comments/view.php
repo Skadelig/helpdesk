@@ -31,7 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'Comment_ID',
             'Request_ID',
             'Users_id',
-            'Comment_date',
+            [
+                'attribute'=>'Comment_date',
+                'format' => ['date', 'php:d.m.Y h:i:s']
+            ],
             'Comment_txt:ntext',
         ],
     ]) ?>

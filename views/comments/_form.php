@@ -5,6 +5,8 @@ use yii\widgets\ActiveForm;
 use kartik\datetime\DateTimePicker;
 use yii\helpers\ArrayHelper;
 use app\models\Users;
+use app\models\Requests;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Comments */
@@ -15,23 +17,30 @@ use app\models\Users;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Request_ID')->textInput() ?>
-
+   
+    <?= $form->field($model, 'Request_ID')->dropDownList(
+        ArrayHelper::map(Requests::find()->all(),"Request_ID",'Request_text')
+    ) ?>
     <?= $form->field($model, 'Users_id')->dropDownList(
         ArrayHelper::map(Users::find()->all(),"Users_id",'Users_login')
     ) ?>
 
 
-    <!--<?= $form->field($model, 'Comment_date')->textInput() ?> -->
-    <?= $form->field($model, 'Comment_date')->widget(DateTimePicker::classname(), 
+    
+    <?php 
+    echo $form->field($model, 'Comment_date')->widget(DateTimePicker::classname(), 
         [
             'options' => ['placeholder' => 'Дата заявки'],
             'pluginOptions' => 
                 [
+                    'language' => 'ru',
+                    'locale' => 'ua',
                     'autoclose'=>true,
-                    'format'=>"yyyy.m.d HH:ii "
+                    'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
-        ])?>
+        ])
+        ?>
+   
 
     <?= $form->field($model, 'Comment_txt')->textarea(['rows' => 6]) ?>
 

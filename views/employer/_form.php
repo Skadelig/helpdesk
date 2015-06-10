@@ -35,8 +35,9 @@ use app\models\Department;
             'options' => ['placeholder' => 'День рождения'],
             'pluginOptions' => 
                 [
+                    'language' => 'ru',
                     'autoclose'=>true,
-                    'format'=>"yyyy.m.d"
+                    'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
         ])?>
 

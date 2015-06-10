@@ -98,4 +98,11 @@ class Employer extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Users::className(), ['Employer_ID' => 'Employer_ID']);
     }
+     public function beforeSave($insert)
+    {
+            $date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Employer_birthday);
+            $this->Employer_birthday = $date->format('Y-m-d H:i:s');
+        
+            return true;
+    }
 }

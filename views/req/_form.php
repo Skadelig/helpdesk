@@ -38,12 +38,15 @@ use kartik\datetime\DateTimePicker;
 
     <?= $form->field($model, 'Request_date')->widget(DateTimePicker::classname(), 
         [
-            'options' => ['placeholder' => 'Дата заявки'],
+            'options' => ['placeholder' => 'Дата заявки'
+                // $model->isNewRecord ? [] : 'value' => \Datetime()->format("d-m-Y H:i:s")
+            ],
             'pluginOptions' => 
                 [
+                    'language' => 'ru',
                     'autoclose'=>true,
                     'value' => '8-Jun-2015 00:00',
-                    'format'=>"dd-mm-yyyy HH:ii"
+                    'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
         ])?>
 
@@ -52,9 +55,10 @@ use kartik\datetime\DateTimePicker;
             'options' => ['placeholder' => 'Фактическое заверешние'],
             'pluginOptions' => 
                 [
+                    'language' => 'ru',
                     'autoclose'=>true,
                      'value' => '8-Jun-2015 01:00',
-                    'format'=>"dd-mm-yyyy HH:ii"
+                    'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
         ])?>
    
@@ -63,9 +67,10 @@ use kartik\datetime\DateTimePicker;
             'options' => ['placeholder' => 'Дата предполагаемого завершения'],
             'pluginOptions' => 
                 [
+                    'language' => 'ru',
                     'autoclose'=>true,
                     'value' => '8-Jun-2015 01:00',
-                    'format'=>"dd-mm-yyyy HH:ii"
+                    'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
         ])?>
 

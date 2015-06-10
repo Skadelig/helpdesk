@@ -35,9 +35,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'Priority_ID',
             'Users_id',
             'Defects_ID',
-            'Request_date',
-            'Request_FacticalDateEnding',
-            'Request_DataEnding',
+            [
+                'attribute'=>'Request_date',
+                'format' => ['date', 'php:d.m.Y h:i:s']
+            ],
+            [
+                'attribute'=>'Request_FacticalDateEnding',
+                'format' => ['date', 'php:d.m.Y h:i:s']
+            ],
+            [
+                'attribute'=>'Request_DataEnding',
+                'format' => ['date', 'php:d.m.Y h:i:s']
+            ],
         ],
     ]) ?>
 

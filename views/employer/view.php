@@ -35,7 +35,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'Department_ID',
             'Employer_surname',
             'Employer_name',
-            'Employer_birthday',
+            [
+                'attribute'=>'Employer_birthday',
+                'format' => ['date', 'php:d.m.Y h:i:s']
+            ],
         ],
     ]) ?>
 

@@ -34,7 +34,6 @@ use app\models\Requests;
             'pluginOptions' => 
                 [
                     'language' => 'ru',
-                    'locale' => 'ua',
                     'autoclose'=>true,
                     'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]

@@ -91,18 +91,11 @@ AppAsset::register($this);
         </div>
     </footer>
 
-  /**
- * Russian translation for bootstrap-datetimepicker
- * Victor Taranenko <darwin@snowdale.com>
- */
 
 <?php $this->endBody() ?>
 
 <script>
-  /**
- * Russian translation for bootstrap-datetimepicker
- * Victor Taranenko <darwin@snowdale.com>
- */
+
 ;(function($){
     $.fn.datetimepicker.dates['ru'] = {
         days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],

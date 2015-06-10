@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'Access_statis:boolean',
             // 'Access_comnt:boolean',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            
         ],
     ]); ?>
 

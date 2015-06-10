@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Priority_nm',
             'Priority_about:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            
         ],
     ]); ?>
 

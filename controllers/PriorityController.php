@@ -63,7 +63,7 @@ class PriorityController extends Controller
         $model = new Priority();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Priority_ID]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,

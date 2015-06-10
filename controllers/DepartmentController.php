@@ -63,7 +63,7 @@ class DepartmentController extends Controller
         $model = new Department();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Department_ID]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,

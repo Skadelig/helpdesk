@@ -33,7 +33,7 @@ class Comments extends \yii\db\ActiveRecord
     {
         return [
             [['Request_ID', 'Users_id'], 'integer'],
-            [['Comment_date'], 'safe'],
+            [['Comment_date'], 'required'],
             [['Comment_txt'], 'string']
         ];
     }

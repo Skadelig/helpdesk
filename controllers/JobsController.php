@@ -63,7 +63,7 @@ class JobsController extends Controller
         $model = new Jobs();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Job_ID]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,

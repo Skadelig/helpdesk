@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        // 'filterModel' => $searchModel,
         'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
@@ -48,7 +48,11 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'Employer_name',
             // 'Employer_birthday',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                // 'template'=>'{update}  {delete}'
+            ],
+            
         ],
     ]); ?>
 

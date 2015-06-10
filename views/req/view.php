@@ -31,10 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'Request_ID',
             'Request_text:ntext',
             'Executionstatus:boolean',
-            'Employer_ID',
-            'Priority_ID',
-            'Users_id',
-            'Defects_ID',
+            'employer.Employer_surname',
+            'priority.Priority_nm',
+            'users.Users_login',
+            'defects.Defects_nm',
             [
                 'attribute'=>'Request_date',
                 'format' => ['date', 'php:d.m.Y h:i:s']

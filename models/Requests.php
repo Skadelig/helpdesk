@@ -107,13 +107,13 @@ class Requests extends \yii\db\ActiveRecord
     }
          public function beforeSave($insert)
     {
-            $date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Request_date);
-            $this->Request_date = $date->format('Y-m-d H:i:s');
+           if($date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Request_date)) 
+           $this->Request_date = $date->format('Y-m-d H:i:s');
 
-             $date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Request_FacticalDateEnding);
+             if($date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Request_FacticalDateEnding))
             $this->Request_FacticalDateEnding = $date->format('Y-m-d H:i:s');
 
-             $date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Request_DataEnding);
+             if($date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Request_DataEnding))
             $this->Request_DataEnding = $date->format('Y-m-d H:i:s');
         
             return true;

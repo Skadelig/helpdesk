@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'Users_id',
+            // 'Users_id',
             [
                 'attribute'=>'Access_ID',
                 'value'=>'access.Access_nm'
@@ -37,7 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
           //  'Users_pass',
           //  'Users_access',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+                'template'=>''
+            ],
         ],
     ]); ?>
 

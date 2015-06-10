@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'Comment_ID',
+            // 'Comment_ID',
             [
                 'attribute'=>'Request_ID',
                 'value'=>'request.Request_text'

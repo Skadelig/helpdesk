@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use app\models\Jobs;
 /* @var $this yii\web\View */
 /* @var $model app\models\Employer */
 
@@ -30,7 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Employer_ID',
-            'Job_ID',
+                'jobs.Job_name',
+         
             'Users_id',
             'Department_ID',
             'Employer_surname',

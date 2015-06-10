@@ -30,10 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Employer_ID',
-                'jobs.Job_name',
+            'jobs.Job_name',
          
-            'Users_id',
-            'Department_ID',
+            // 'Users_id',
+            'department.Department_name',
             'Employer_surname',
             'Employer_name',
             [

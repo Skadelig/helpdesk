@@ -67,7 +67,7 @@ class ReqController extends Controller
         if ($model->load(Yii::$app->request->post()) ) {
             $model->Request_date = date('Y-m-d h:m:s');
             $model->save();
-            return $this->redirect(['index']);
+            return $this->redirect(['view', 'id' => $model->Request_ID]);
         } else {
             return $this->render('create', [
                 'model' => $model,

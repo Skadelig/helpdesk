@@ -69,7 +69,7 @@ class Comments extends \yii\db\ActiveRecord
     }
     public function beforeSave($insert)
     {
-            $date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Comment_date);
+            if($date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Comment_date))
             $this->Comment_date = $date->format('Y-m-d H:i:s');
         
             return true;

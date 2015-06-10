@@ -220,6 +220,8 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function beforeSave($insert)
     {
+
+        
         if (parent::beforeSave($insert)) {
             if ($insert) {
                 $this->generateAuthKey();

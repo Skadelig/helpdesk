@@ -69,7 +69,7 @@ function onAjaxSuccess(data)
 {
   // Здесь мы получаем данные, отправленные сервером и выводим их на экран.
   $('.comments').html(data);
-  alert(data)
+ 
 }
 });
 JS;

@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $model app\models\Requests */
 
@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-    <?= DetailView::widget([
+<?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'Request_ID',
@@ -49,5 +49,31 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]) ?>
+<h2>Комментарии</h2>
+<div class="comments">
+</div>
+<?php
+$script = "var request_id = ". $model->Request_ID.';
+';
+$script.= <<< JS
+$(document).ready(function() {
+    $.get(
+  "/index.php",
+  {
+    r: "comments/for",
+    id: request_id
+  },
+  onAjaxSuccess
+);
+function onAjaxSuccess(data)
+{
+  // Здесь мы получаем данные, отправленные сервером и выводим их на экран.
+  $('.comments').html(data);
+  alert(data)
+}
+});
+JS;
+$this->registerJs($script);
+?>
 
 </div>

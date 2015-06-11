@@ -65,7 +65,7 @@ class ReqController extends Controller
         $model = new Requests();
 
         if ($model->load(Yii::$app->request->post()) ) {
-            $model->Request_date = date('Y-m-d h:m:s');
+            $model->Request_date = date('Y-m-d h:m:s'); //сохранение даты поста
             $model->save();
             return $this->redirect(['view', 'id' => $model->Request_ID]);
         } else {
@@ -107,6 +107,15 @@ class ReqController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionTime()
+    {
+        return $this->render('time-date', ['response' => date('H:i:s')]);
+    }
+
+    public function actionDate()
+    {
+        return $this->render('time-date', ['response' => date('d.m.Y')]);
+    }
     /**
      * Finds the Requests model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

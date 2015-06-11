@@ -102,7 +102,22 @@ class CommentsController extends Controller
 
         return $this->redirect(['index']);
     }
+    public function actionFor($id){
+        $comments = Comments::find()
+        ->where(['Request_id' => $id])
+        // ->orderBy('id')
+        ->all();
 
+
+        // return $this->render('index', [
+        //     'searchModel' => $searchModel,
+        //     'dataProvider' => $dataProvider,
+        // ]);
+        return $this->renderPartial('_commentsfor', [
+                'comments' => $comments,
+            ]);
+
+    }
     /**
      * Finds the Comments model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

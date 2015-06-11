@@ -52,6 +52,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <h2>Комментарии</h2>
 <div class="comments">
 </div>
+<div class="form">
+</div>
 <?php
 $script = "var request_id = ". $model->Request_ID.';
 ';
@@ -71,7 +73,20 @@ function onAjaxSuccess(data)
   $('.comments').html(data);
  
 }
+
+    $.get(
+  "/index.php",
+  {
+    r: "comments/createshort",
+    
+  },
+  function (data){
+    $('.form').html(data);
+    $("#request_id").val("$model->Request_ID");
+  }
+);
 });
+
 JS;
 $this->registerJs($script);
 ?>

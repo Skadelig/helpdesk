@@ -70,7 +70,19 @@ class CommentsController extends Controller
             ]);
         }
     }
-
+    public function actionCreateshort()
+    {
+        $model = new Comments();
+        $model->Comment_date = date('Y-m-d h:m:s'); //сохранение даты поста
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['req/view', 'id' => $model->Request_ID]);
+            
+        } else {
+            return $this->renderPartial('_formshort', [
+                'model' => $model,
+            ]);
+        }
+    }
     /**
      * Updates an existing Comments model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -105,7 +117,7 @@ class CommentsController extends Controller
     public function actionFor($id){
         $comments = Comments::find()
         ->where(['Request_id' => $id])
-        // ->orderBy('id')
+        ->orderBy('Comment_date')
         ->all();
 
 

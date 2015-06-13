@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+      //  'filterModel' => $searchModel,
         'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
@@ -31,15 +31,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'Request_ID',
                 'value'=>'request.Request_text'
             ],
+        
             [
                 'attribute'=>'Users_id',
                 'value'=>'users.Users_login'
             ],
-            [
+
+         [
                 'attribute'=>'Comment_date',
-                'format' => ['date', 'php:d.m.Y h:i:s']
-            ],
-           
+               'format' => ['date', 'php:d.m.Y h:i:s']
+           ],
+        
             
             'Comment_txt:ntext',
 

@@ -30,7 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'Department_name',
             'Department_number',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+              'template'=>'{update} {view}'],
         ],
     ]); ?>
 

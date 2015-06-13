@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use app\models\Priority;
+use app\models\Defects;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\RequestsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -35,17 +36,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'summary' => '',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
+            'employer.Employer_surname',
+             'Executionstatus:boolean',
+            'Request_text:ntext',/*
             [
                 'attribute'=>'Employer_ID',
                 'value'=>'employer.Employer_surname'
-            ],
-            'Request_text:ntext',
-            'Executionstatus:boolean',
+            ],*/
+          
+           
             [
                 'attribute'=>  'Priority_ID',
                 'value'=> 'priority.Priority_nm'
             ],
-          
+            [
+                'attribute'=>'Defects_ID',
+                'value'=>'defects.Defects_nm'
+            ],
             // 'Users_id',
             // 'Defects_ID',
             // 'Request_date',

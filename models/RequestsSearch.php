@@ -19,9 +19,9 @@ class RequestsSearch extends Requests
     public function rules()
     {
         return [
-            [['Request_ID', 'Users_id', 'Defects_ID'], 'integer'],
-            [['Request_text', 'Priority_ID', 'Employer_ID', 'Request_date', 'Request_FacticalDateEnding', 'Request_DataEnding'], 'safe'],
-            [['Executionstatus'], 'boolean'],
+            [['Request_ID'], 'integer'],
+            [['Request_text', 'Users_id', 'Defects_ID','Priority_ID', 'Employer_ID', 'Request_date', 'Request_FacticalDateEnding', 'Request_DataEnding'], 'safe'],
+         /*   [['Executionstatus'], 'boolean'],*/
         ];
     }
 
@@ -57,20 +57,22 @@ class RequestsSearch extends Requests
             return $dataProvider;
         }
         $query->joinWith('priority');
+        $query->joinWith('defects');
         $query->andFilterWhere([
             'Request_ID' => $this->Request_ID,
-            'Executionstatus' => $this->Executionstatus,
+           /* 'Executionstatus' => $this->Executionstatus,*/
             'Employer_ID' => $this->Employer_ID,
             /*'Priority_ID' => $this->Priority_ID,*/
             'Users_id' => $this->Users_id,
-            'Defects_ID' => $this->Defects_ID,
+            /*'Defects_ID' => $this->Defects_ID,*/
             'Request_date' => $this->Request_date,
             'Request_FacticalDateEnding' => $this->Request_FacticalDateEnding,
             'Request_DataEnding' => $this->Request_DataEnding,
         ]);
        
         $query->andFilterWhere(['like', 'Request_text', $this->Request_text])
-            ->andFilterWhere(['like', 'priority.Priority_nm', $this->Priority_ID]);
+            ->andFilterWhere(['like', 'priority.Priority_nm', $this->Priority_ID])
+            ->andFilterWhere(['like', 'defects.Defects_nm', $this->Defects_ID]);
 
         return $dataProvider;
     }

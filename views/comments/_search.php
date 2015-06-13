@@ -21,8 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Users_id') ?>
 
-    <?= $form->field($model, 'Comment_date') ?>
-
+   
     <?= $form->field($model, 'Comment_txt') ?>
 
     <div class="form-group">

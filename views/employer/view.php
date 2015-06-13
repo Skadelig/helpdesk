@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Обновить', ['update', 'id' => $model->Employer_ID], ['class' => 'btn btn-primary']) ?>
-       
+        <?= Html::a('Статистика сотрудника', ['userstats', 'id' => $model->Employer_ID], ['class' => 'btn btn-warning']) ?>
     </p>
 
     <?= DetailView::widget([

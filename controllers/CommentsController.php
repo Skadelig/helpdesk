@@ -125,7 +125,7 @@ class CommentsController extends Controller
         //     'searchModel' => $searchModel,
         //     'dataProvider' => $dataProvider,
         // ]);
-        return $this->renderPartial('_commentsfor', [
+        return $this->renderAjax('_commentsfor', [
                 'comments' => $comments,
             ]);
 

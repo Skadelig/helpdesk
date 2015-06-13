@@ -5,9 +5,11 @@ namespace app\controllers;
 use Yii;
 use app\models\Employer;
 use app\models\EmployerSearch;
+use app\models\EmployerStats;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
 
 /**
  * EmployerController implements the CRUD actions for Employer model.
@@ -102,7 +104,20 @@ class EmployerController extends Controller
 
         return $this->redirect(['index']);
     }
-
+      /**
+     * Deletes an existing Users model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionUserstats($id)
+    {
+        $model = new EmployerStats();
+        $model->findAll($id);
+        return $this->render('userstats',[
+            'model' => $model
+            ]);
+    }
     /**
      * Finds the Employer model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

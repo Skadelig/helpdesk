@@ -60,7 +60,7 @@ $script = "var request_id = ". $model->Request_ID.';
 $script.= <<< JS
 $(document).ready(function() {
     $.get(
-  "/index.php",
+  "index.php",
   {
     r: "comments/for",
     id: request_id
@@ -75,7 +75,7 @@ function onAjaxSuccess(data)
 }
 
     $.get(
-  "/index.php",
+  "index.php",
   {
     r: "comments/createshort",
     

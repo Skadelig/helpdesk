@@ -37,8 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="row" style="padding-bottom:10px;">
         <div class="col-lg-12">
-            <?= Html::a('Все заявки', ['index'], ['class' => 'btn btn btn-success']) ?>
-            <?= Html::a('Невыполненные заявки', ['notdone'], ['class' => 'btn btn btn-default']) ?>
+            <?= Html::a('Все заявки', ['index'], ['class' => 'btn  btn-default']) ?>
+            <?= Html::a('Невыполненные заявки', ['notdone'], ['class' => 'btn btn-success']) ?>
         </div>
     </div>
 
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'employer.Employer_surname',
-             'Executionstatus:boolean',
+            // 'Executionstatus:boolean',
             'Request_text:ntext',/*
             [
                 'attribute'=>'Employer_ID',
@@ -67,8 +67,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             // 'Users_id',
             // 'Defects_ID',
-            // 'Request_date',
-            // 'Request_FacticalDateEnding',
+             // 'Request_date',
+            [
+                'attribute'=>'Request_FacticalDateEnding',
+               'format' => ['date', 'php:d.m.Y h:i:s']
+           ],
+            
             // 'Request_DataEnding',
 
             ['class' => 'yii\grid\ActionColumn'],

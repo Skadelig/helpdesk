@@ -50,7 +50,7 @@ class RequestsSearch extends Requests
         ]);
 
         $this->load($params);
-    
+ 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
@@ -73,6 +73,49 @@ class RequestsSearch extends Requests
         $query->andFilterWhere(['like', 'Request_text', $this->Request_text])
             ->andFilterWhere(['like', 'priority.Priority_nm', $this->Priority_ID])
             ->andFilterWhere(['like', 'defects.Defects_nm', $this->Defects_ID]);
+
+        return $dataProvider;
+    }
+    /**
+    *@return \yii\db\ActiveQuery
+    */
+    public function notdonelist($params)
+    {
+       $query = Requests::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+ 
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+        $query->joinWith('priority');
+        $query->joinWith('defects');
+        $query->andFilterWhere([
+            'Request_ID' => $this->Request_ID,
+           /* 'Executionstatus' => $this->Executionstatus,*/
+            'Employer_ID' => $this->Employer_ID,
+            /*'Priority_ID' => $this->Priority_ID,*/
+            'Users_id' => $this->Users_id,
+            /*'Defects_ID' => $this->Defects_ID,*/
+            'Request_date' => $this->Request_date,
+            
+            'Request_DataEnding' => $this->Request_DataEnding,
+        ]);
+       
+        $query->andFilterWhere(['like', 'Request_text', $this->Request_text])
+            ->andFilterWhere(['like', 'priority.Priority_nm', $this->Priority_ID])
+            ->andFilterWhere(['like', 'defects.Defects_nm', $this->Defects_ID])
+            ->orFilterWhere(['>', 'Request_FacticalDateEnding', date('Y-m-d h:m:s')])
+            ->orWhere(['Request_FacticalDateEnding' => null])
+            ;
+            
+            // ->having(['=', 'Request_FacticalDateEnding', 'NULL']);
 
         return $dataProvider;
     }

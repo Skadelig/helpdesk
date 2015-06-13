@@ -8,7 +8,7 @@ use app\models\RequestsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\data\ActiveDataProvider;
 /**
  * ReqController implements the CRUD actions for Requests model.
  */
@@ -43,6 +43,20 @@ class ReqController extends Controller
         
     }
 
+    /**
+     * Lists all Requests models.
+     * @return mixed
+     */
+    public function actionNotdone()
+    {
+            $searchModel = new RequestsSearch();
+            $dataProvider = $searchModel->notdonelist(Yii::$app->request->queryParams);
+
+            return $this->render('notdone', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+    }
     /**
      * Displays a single Requests model.
      * @param integer $id

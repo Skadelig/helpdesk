@@ -37,8 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'employer.Employer_surname',
-             'Executionstatus:boolean',
-            'Request_text:ntext',/*
+            'Executionstatus:boolean',
+            'Request_text:ntext',
+            /*
             [
                 'attribute'=>'Employer_ID',
                 'value'=>'employer.Employer_surname'

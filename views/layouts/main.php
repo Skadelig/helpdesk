@@ -30,7 +30,7 @@ AppAsset::register($this);
         <?php
             NavBar::begin([
                 'brandLabel' => 'HelpDesk',
-                'brandUrl' => Yii::$app->homeUrl,
+                'brandUrl' => ['/site/index'],
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],

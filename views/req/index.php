@@ -15,24 +15,13 @@ $this->title = 'Заявки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="requests-index">
-<!--<div class="col-lg-12">
-                <?= Html::a('Заявки', ['req/index']) ?>+
-                <?= Html::a('Роли', ['access/index']) ?>
-                <?= Html::a('Комментарии', ['comments/index']) ?>+
-                <?= Html::a('Дефекты', ['defects/index']) ?>+
-                <?= Html::a('Отделы', ['department/index']) ?>+
-                <?= Html::a('Сотрудники', ['employer/index']) ?>+
-                <?= Html::a('Должности', ['jobs/index']) ?>+
-                <?= Html::a('Приоритет', ['priority/index']) ?>+
-                <?= Html::a('Пользователи', ['users/index']) ?>+
 
-            </div>-->
     <div class="row">
         
         <div class="col-lg-10" style="vertical-align:baseline;">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
             <p>
-                <?= Html::button('Создать заявку', ['value'=>Url::to(['req/create']), 'class' => 'btn btn btn-primary', 'id'=>"modal-button" ]) ?>
+                <?= Html::button('Создать заявку', ['data-url'=>Url::to(['req/create']), 'class' => 'btn btn btn-primary', "data-toggle"=>"modal", "data-target"=>"#create-modal"]) ?>
             </p>
         </div>
     </div>
@@ -80,12 +69,24 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <?php
 Modal::begin([
-    'header' => '<h2>Hello world</h2>',
+    'header' => '<h2>Создать заявку</h2>',
     'id' => "create-modal"
 ]);
 
-echo 'Say hello...';
+echo '<div class="modal-form"></div>';
 
 
 Modal::end();
+$jsscript = <<<JS
+
+$(function(){
+    
+    $('#create-modal').on('shown.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var modal = $(this);
+        modal.find(".modal-form").load(button.data('url'));
+    })
+});
+JS;
+$this->registerJs($jsscript);
 ?>

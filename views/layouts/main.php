@@ -1,5 +1,7 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
+
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -29,7 +31,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
     <header class="main-header">
                 <!-- Logo -->
-                <a href="index2.html" class="logo">
+                 <a href="<?= Url::to(['req/index'])?>" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><b>H</b>D</span>
                     <!-- logo for regular state and mobile devices -->
@@ -73,69 +75,52 @@ AppAsset::register($this);
                    
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-share"></i> <span>Multilevel</span>
-                                <i class="fa fa-angle-left pull-right"></i>
+                    <li class="header">Главное меню</li>
+                        <li>
+                            <a href="<?= Url::to(['req/index'])?>">
+                                <i class="fa fa-share"></i> <span>Заявки</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                                <li>
-                                    <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                                            <ul class="treeview-menu">
-                                                <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                                <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                            
+                        </li>
+                         <li>
+                            <a href="<?= Url::to(['employer/index'])?>">
+                                <i class="fa fa-edit"></i> <span>Сотрудники</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['comments/index'])?>">
+                                <i class="fa fa-dashboard"></i> <span>Комментарии</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['stats/index'])?>">
+                                <i class="fa fa-pie-chart"></i> <span>Статистика</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               <i class="fa fa-angle-left pull-right"></i><span>Настройки</span>
+                            </a>
+                            <ul class="treeview-menu menu-open">
+                                <li> <a href="<?= Url::to(['access/index'])?>"><i class="fa fa-circle-o"></i>Роли</a></li>
+                                <li> <a href="<?= Url::to(['defects/index'])?>"><i class="fa fa-circle-o"></i>Дефекты</a></li>
+                                <li> <a href="<?= Url::to(['department/index'])?>"><i class="fa fa-circle-o"></i>Отделы</a></li>
+                                <li> <a href="<?= Url::to(['jobs/index'])?>"><i class="fa fa-circle-o"></i>Должности</a></li>
+                                <li> <a href="<?= Url::to(['priority/index'])?>"><i class="fa fa-circle-o"></i>Приоритет</a></li>
+                                <li> <a href="<?= Url::to(['users/index'])?>"><i class="fa fa-circle-o"></i>Пользователи</a></li>
                             </ul>
                         </li>
-                        
                     </ul>
                 </section>
                 <!-- /.sidebar -->
             </aside>
-
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
     
          <?php
-        //     NavBar::begin([
-        //         'brandLabel' => 'HelpDesk',
-        //         'brandUrl' => ['/site/index'],
-        //         'options' => [
-        //             'class' => 'navbar-inverse navbar-fixed-top',
-        //         ],
-                
-
-        //     ]);
-        //     echo Nav::widget([
-        //         'options' => ['class' => 'navbar-nav navbar-right'],
-        //         'items' => [
-        //             ['label' => 'Домой', 'url' => ['/site/index']],
-        //             Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Заявки', 'url' => ['/req/index']],
-        //             Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Сотрудники', 'url' => ['/employer/index']],
-        //             Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Комментарии', 'url' => ['/comments/index']],
-        //             Yii::$app->user->isGuest ?['label'=>' ']:['label' => 'Статистика', 'url'=>['/stats/index']],
-        //             Yii::$app->user->isGuest ?['label'=>' ']:[
-        //                 'label' => 'Настройки',
-        //                 'items' => [
-        //                      ['label' => 'Роли', 'url' => ['access/index']],
-        //                      ['label' => 'Дефекты', 'url' => ['defects/index']],
-        //                      ['label' => 'Отделы', 'url' => ['department/index']],
-        //                      ['label' => 'Должности', 'url' => ['jobs/index']],
-        //                      ['label' => 'Приоритет', 'url' => ['priority/index']],
-        //                      ['label' => 'Пользователи', 'url' => ['users/index']],
-                        
-                             
-        //                 ],
-        //             ],
+        //   
+        //            //             ],
         //             Yii::$app->user->isGuest ?
         //             ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
         //              Yii::$app->user->isGuest ?

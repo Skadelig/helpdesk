@@ -137,9 +137,7 @@ AppAsset::register($this);
 
 
 <?php $this->endBody() ?>
-<script>
-            $.widget.bridge('uibutton', $.ui.button);
-        </script>
+
 <script>
 
 ;(function($){

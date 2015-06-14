@@ -36,19 +36,7 @@ use kartik\datetime\DateTimePicker;
         ArrayHelper::map(Defects::find()->all(),"Defects_ID","Defects_nm")
     ) ?>
 
-    <?= $form->field($model, 'Request_date')->widget(DateTimePicker::classname(), 
-        [
-            'options' => ['placeholder' => 'Дата заявки'
-                // $model->isNewRecord ? [] : 'value' => \Datetime()->format("d-m-Y H:i:s")
-            ],
-            'pluginOptions' => 
-                [
-                    'language' => 'ru',
-                    'autoclose'=>true,
-                    'value' => '8-Jun-2015 00:00',
-                    'format'=>"dd-mm-yyyy HH:ii:ss",
-                ]
-        ])?>
+ 
 
     <?= $form->field($model, 'Request_FacticalDateEnding')->widget(DateTimePicker::classname(), 
         [

@@ -81,9 +81,9 @@ class ReqController extends Controller
         if ($model->load(Yii::$app->request->post()) ) {
             $model->Request_date = date('Y-m-d h:m:s'); //сохранение даты поста
             $model->save();
-            return $this->redirect(['view', 'id' => $model->Request_ID]);
+            return $this->redirect(['index']);
         } else {
-            return $this->renderAjax('create', [
+            return $this->render('create', [
                 'model' => $model,
             ]);
         }

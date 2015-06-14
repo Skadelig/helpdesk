@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-10" style="vertical-align:baseline;">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
             <p>
-                <?= Html::button('Создать заявку', ['data-url'=>Url::to(['req/create']), 'class' => 'btn btn btn-primary', "data-toggle"=>"modal", "data-target"=>"#create-modal"]) ?>
+                <?= Html::a('Создать заявку', ['req/create'], ['class' => 'btn btn btn-primary']) ?>
             </p>
         </div>
     </div>
@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div class="box">
+    <?php \yii\widgets\Pjax::begin(); ?>
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
@@ -65,28 +66,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 ['class' => 'yii\grid\ActionColumn'],
             ],
         ]); ?>
+        <?php \yii\widgets\Pjax::end(); ?>
     </div>
 </div>
-<?php
-Modal::begin([
-    'header' => '<h2>Создать заявку</h2>',
-    'id' => "create-modal"
-]);
+ 
 
-echo '<div class="modal-form"></div>';
-
-
-Modal::end();
-$jsscript = <<<JS
-
-$(function(){
-    
-    $('#create-modal').on('shown.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        var modal = $(this);
-        modal.find(".modal-form").load(button.data('url'));
-    })
-});
-JS;
-$this->registerJs($jsscript);
 ?>

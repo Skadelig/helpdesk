@@ -1,9 +1,12 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\grid\GridView;
 use app\models\Priority;
 use app\models\Defects;
+use yii\bootstrap\Modal;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\RequestsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -29,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-10" style="vertical-align:baseline;">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
             <p>
-                <?= Html::a('Создать заявку', ['create'], ['class' => 'btn btn btn-primary']) ?>
+                <?= Html::button('Создать заявку', ['value'=>Url::to(['req/create']), 'class' => 'btn btn btn-primary', 'id'=>"modal-button" ]) ?>
             </p>
         </div>
     </div>
@@ -75,3 +78,14 @@ $this->params['breadcrumbs'][] = $this->title;
         ]); ?>
     </div>
 </div>
+<?php
+Modal::begin([
+    'header' => '<h2>Hello world</h2>',
+    'id' => "create-modal"
+]);
+
+echo 'Say hello...';
+
+
+Modal::end();
+?>

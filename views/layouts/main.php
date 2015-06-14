@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use yii\web\Cookie;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -27,7 +27,7 @@ AppAsset::register($this);
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />  
 </head>
-<body class="skin-blue sidebar-mini">
+<body class="skin-blue sidebar-mini <?= $_COOKIE['sidebar'] ;?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">    
@@ -51,17 +51,20 @@ AppAsset::register($this);
                             <!-- Tasks: style can be found in dropdown.less -->
                             
                             <!-- User Account: style can be found in dropdown.less -->
-                            <li class="dropdown user user-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                   
-                                    <span class="hidden-xs">Alexander Pierce</span>
-                                </a>
-                                <ul class="dropdown-menu">
+                            <li class="dropdown">
+                              
+                                
                                  
-                                    <li >
-                                       vty
-                                    </li>
-                                </ul>
+                                    
+                                       <?php 
+                                       if (Yii::$app->user->isGuest){ 
+                                            echo Html::a('Войти в систему', ['/site/login']) ;
+                                            }else{
+                                            echo Html::a('Покинуть систему', ['/site/logout'], ['data-method' => 'post'] );
+                                        }
+                                    ?>
+                                    
+                                
                             </li>
                            
                         </ul>
@@ -119,23 +122,9 @@ AppAsset::register($this);
             </aside>
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
-    
-         <?php
-        //             Yii::$app->user->isGuest ?
-        //             ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
-        //              Yii::$app->user->isGuest ?
-        //                 ['label' => 'Войти в систему',  'url' => ['/site/login']] :
-        //                 ['label' => 'Покинуть систему ',
-        //                 // ['label' => 'Покинуть систему (' . Yii::$app->users->identity->username . ')',
 
-        //                     'url' => ['/site/logout'],
-        //                     'linkOptions' => ['data-method' => 'post']],
-        //         ],
-        //     ]);
-        //     NavBar::end();
-        ?>
         <section class="content-header">
-     <!--    <h1><?=$this->title?></h1> -->
+            <h1><?=$this->title?></h1>
               <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 'homeLink'=>[
@@ -161,7 +150,9 @@ AppAsset::register($this);
 
 
 <?php $this->endBody() ?>
-
+<script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
 <script>
 
 ;(function($){

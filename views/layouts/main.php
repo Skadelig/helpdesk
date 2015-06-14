@@ -27,7 +27,8 @@ AppAsset::register($this);
 </head>
 <body class="skin-blue sidebar-mini">
 <?php $this->beginBody() ?>
-    <header class="main-header">
+<div class="wrapper">
+    <header class="main-header">    
                 <!-- Logo -->
                 <a href="index2.html" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -159,19 +160,20 @@ AppAsset::register($this);
                 ],
             ]) ?>
         </section>
-        <div class="container">
+        <div class="content">
           
             <?= $content ?>
             
         </div>
     </div>
+    <footer class="main-footer">
+                <div class="pull-right hidden-xs"
+                <?= Yii::powered() ?>
+                </div>
+                <strong>&copy; HelpDesk </strong> <?= date('Y') ?>
 
-    <footer class="footer">
-        <div class="container">
-            <p class="pull-left">&copy; HelpDesk <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
     </footer>
+</div>   
 
 
 <?php $this->endBody() ?>

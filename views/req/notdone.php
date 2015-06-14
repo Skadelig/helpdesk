@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::a('Невыполненные заявки', ['notdone'], ['class' => 'btn btn-success']) ?>
         </div>
     </div>
-
+    <div class="box">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -76,5 +76,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+</div>
 </div>

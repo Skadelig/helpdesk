@@ -89,3 +89,12 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+.btn{
+    width: 114px;
+}
+.btn a{
+    padding: 5px 15px;
+}
+.btn-default{
+    width: 210px;
+}

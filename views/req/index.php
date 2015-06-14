@@ -35,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             </p>
         </div>
     </div>
-    <div class="row" style="padding-bottom:10px;">
-        <div class="col-lg-12">
+    <div class="row" style="padding-bottom:15px; padding-top: 20px;">
+        <div class="col-lg-10">
             <?= Html::a('Все заявки', ['index'], ['class' => 'btn btn btn-success']) ?>
             <?= Html::a('Невыполненные заявки', ['notdone'], ['class' => 'btn btn btn-default']) ?>
         </div>

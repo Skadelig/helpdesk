@@ -6,7 +6,7 @@ use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\models\EmployerStats;
 class StatsController extends Controller
 {
     public function behaviors()
@@ -26,9 +26,12 @@ class StatsController extends Controller
      * @return mixed
      */
     public function actionIndex()
-    {   
-
-         return $this->render('index');
+    {
+         
+       
+         $model = new EmployerStats();
+         $model->findStatsall();
+         return $this->render('index',['model'=>$model]);
     }
 }
 ?>

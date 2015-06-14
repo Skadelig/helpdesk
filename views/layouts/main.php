@@ -112,6 +112,7 @@ AppAsset::register($this);
                                 <li> <a href="<?= Url::to(['users/index'])?>"><i class="fa fa-circle-o"></i>Пользователи</a></li>
                             </ul>
                         </li>
+
                     </ul>
                 </section>
                 <!-- /.sidebar -->
@@ -120,8 +121,6 @@ AppAsset::register($this);
             <div class="content-wrapper">
     
          <?php
-        //   
-        //            //             ],
         //             Yii::$app->user->isGuest ?
         //             ['label' => 'Регистрация', 'url' => ['/site/signup']]:['label'=>" "],
         //              Yii::$app->user->isGuest ?
@@ -136,7 +135,7 @@ AppAsset::register($this);
         //     NavBar::end();
         ?>
         <section class="content-header">
-        <h1><?=$this->title?></h1>
+     <!--    <h1><?=$this->title?></h1> -->
               <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 'homeLink'=>[

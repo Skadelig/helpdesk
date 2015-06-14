@@ -23,9 +23,9 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    
     <!-- Ionicons 2.0.0 -->
-    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />  
+     
 </head>
 <body class="skin-blue sidebar-mini <?php if(isset($_COOKIE['sidebar'])) echo $_COOKIE['sidebar'] ;?>">
 <?php $this->beginBody() ?>
@@ -139,7 +139,7 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 
 <script>
-
+;(function($){$.fn.datepicker.dates.ru={days:["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"],daysShort:["Вск","Пнд","Втр","Срд","Чтв","Птн","Суб","Вск"],daysMin:["Вс","Пн","Вт","Ср","Чт","Пт","Сб","Вс"],months:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],monthsShort:["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"],today:"Сегодня",clear:"Очистить",format:"dd.mm.yyyy",weekStart:1}}(jQuery));
 ;(function($){
     $.fn.datetimepicker.dates['ru'] = {
         days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],

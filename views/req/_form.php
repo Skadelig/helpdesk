@@ -45,7 +45,7 @@ use kartik\datetime\DateTimePicker;
                 [
                     'language' => 'ru',
                     'autoclose'=>true,
-                     'value' => '8-Jun-2015 01:00',
+                     'value' => '15-Jun-2015 01:00',
                     'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
         ])?>
@@ -57,7 +57,7 @@ use kartik\datetime\DateTimePicker;
                 [
                     'language' => 'ru',
                     'autoclose'=>true,
-                    'value' => '8-Jun-2015 01:00',
+                    'value' => '15-Jun-2015 01:00',
                     'format'=>"dd-mm-yyyy HH:ii:ss",
                 ]
         ])?>

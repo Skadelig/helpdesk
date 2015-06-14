@@ -179,11 +179,11 @@ $(function () {
   }
 
   //Activate Bootstrap tooltip
-  if (o.enableBSToppltip) {
-    $('body').tooltip({
-      selector: o.BSTooltipSelector
-    });
-  }
+  // if (o.enableBSToppltip) {
+  //   $('body').tooltip({
+  //     selector: o.BSTooltipSelector
+  //   });
+  // }
 
   //Activate box widget
   if (o.enableBoxWidget) {
@@ -195,13 +195,7 @@ $(function () {
     FastClick.attach(document.body);
   }
 
-  //Activate direct chat widget
-  if (o.directChat.enable) {
-    $(o.directChat.contactToggleSelector).on('click', function () {
-      var box = $(this).parents('.direct-chat').first();
-      box.toggleClass('direct-chat-contacts-open');
-    });
-  }
+  
 
   /*
    * INITIALIZE BUTTON TOGGLE

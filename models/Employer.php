@@ -100,8 +100,8 @@ class Employer extends \yii\db\ActiveRecord
     }
      public function beforeSave($insert)
     {
-           if( $date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Employer_birthday))
-            $this->Employer_birthday = $date->format('Y-m-d H:i:s');
+           if( $date = \Datetime::createFromFormat('d-m-Y ', $this->Employer_birthday))
+            $this->Employer_birthday = $date->format('Y-m-d ');
             return true;
     }
 }

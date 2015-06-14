@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use kartik\datetime\DateTimePicker;
+use kartik\date\DatePicker;
 use yii\helpers\ArrayHelper;
 
 use app\models\Jobs;
@@ -30,14 +30,14 @@ use app\models\Department;
 
     <?= $form->field($model, 'Employer_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Employer_birthday')->widget(DateTimePicker::classname(), 
+    <?= $form->field($model, 'Employer_birthday')->widget(DatePicker::classname(), 
         [
             'options' => ['placeholder' => 'День рождения'],
             'pluginOptions' => 
                 [
                     'language' => 'ru',
                     'autoclose'=>true,
-                    'format'=>"dd-mm-yyyy hh:ii:ss",
+                    'format'=>"dd-mm-yyyy",
                 ]
         ])?>
 

@@ -6,7 +6,7 @@ use yii\grid\GridView;
 use app\models\Priority;
 use app\models\Defects;
 use yii\bootstrap\Modal;
-
+use yii\grid\CheckboxColumn;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\RequestsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -40,7 +40,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
                 'employer.Employer_surname',
-                'Executionstatus:boolean',
+                [
+                    'attribute'=>'Executionstatus',
+                    'value'=> 'ExecutionstatusLabel',
+                    'format'=>'raw',
+
+                    // 'Executionstatus:boolean'
+                ],
                 'Request_text:ntext',
                 /*
                 [
@@ -70,5 +76,3 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </div>
  
-
-?>

@@ -113,7 +113,7 @@ class EmployerController extends Controller
     public function actionUserstats($id)
     {
         $model = new EmployerStats();
-        $model->findAll($id);
+        $model->findStatsuser($id);
         return $this->render('userstats',[
             'model' => $model
             ]);

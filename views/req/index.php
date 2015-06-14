@@ -25,9 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             </div>-->
     <div class="row">
-        <div class="col-lg-2">
-            <h1 style="margin-top:0px;"><?= Html::encode($this->title) ?></h1>
-        </div>
+        
         <div class="col-lg-10" style="vertical-align:baseline;">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
             <p>
@@ -41,39 +39,39 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::a('Невыполненные заявки', ['notdone'], ['class' => 'btn btn btn-default']) ?>
         </div>
     </div>
+    <div class="box">
+        <?= GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'summary' => '',
+            'columns' => [
+                ['class' => 'yii\grid\SerialColumn'],
+                'employer.Employer_surname',
+                'Executionstatus:boolean',
+                'Request_text:ntext',
+                /*
+                [
+                    'attribute'=>'Employer_ID',
+                    'value'=>'employer.Employer_surname'
+                ],*/
+              
+               
+                [
+                    'attribute'=>  'Priority_ID',
+                    'value'=> 'priority.Priority_nm'
+                ],
+                [
+                    'attribute'=>'Defects_ID',
+                    'value'=>'defects.Defects_nm'
+                ],
+                // 'Users_id',
+                // 'Defects_ID',
+                // 'Request_date',
+                // 'Request_FacticalDateEnding',
+                // 'Request_DataEnding',
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'summary' => '',
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-            'employer.Employer_surname',
-            'Executionstatus:boolean',
-            'Request_text:ntext',
-            /*
-            [
-                'attribute'=>'Employer_ID',
-                'value'=>'employer.Employer_surname'
-            ],*/
-          
-           
-            [
-                'attribute'=>  'Priority_ID',
-                'value'=> 'priority.Priority_nm'
+                ['class' => 'yii\grid\ActionColumn'],
             ],
-            [
-                'attribute'=>'Defects_ID',
-                'value'=>'defects.Defects_nm'
-            ],
-            // 'Users_id',
-            // 'Defects_ID',
-            // 'Request_date',
-            // 'Request_FacticalDateEnding',
-            // 'Request_DataEnding',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
+        ]); ?>
+    </div>
 </div>

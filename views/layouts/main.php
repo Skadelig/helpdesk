@@ -79,29 +79,29 @@ AppAsset::register($this);
                     <li class="header">Главное меню</li>
                         <li>
                             <a href="<?= Url::to(['req/index'])?>">
-                                <i class="fa fa-share"></i> <span>Заявки</span>
+                                <i class="fa fa-list-ul"></i> <span>Заявки</span>
                             </a>
                             
                         </li>
                          <li>
                             <a href="<?= Url::to(['employer/index'])?>">
-                                <i class="fa fa-edit"></i> <span>Сотрудники</span>
+                                <i class="fa fa-user"></i> <span>Сотрудники</span>
                             </a>
                             
                         </li>
                         <li>
                             <a href="<?= Url::to(['comments/index'])?>">
-                                <i class="fa fa-dashboard"></i> <span>Комментарии</span>
+                                <i class="fa fa-comment"></i> <span>Комментарии</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['stats/index'])?>">
-                                <i class="fa fa-pie-chart"></i> <span>Статистика</span>
+                                <i class="fa fa-bar-chart"></i> <span>Статистика</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="fa fa-angle-left pull-right"></i><span>Настройки</span>
+                               <i class="fa fa-cog"></i><i class="fa fa-angle-left pull-right"></i><span>Настройки</span>
                             </a>
                             <ul class="treeview-menu menu-open">
                                 <li> <a href="<?= Url::to(['access/index'])?>"><i class="fa fa-circle-o"></i>Роли</a></li>

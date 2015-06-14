@@ -26,10 +26,13 @@ $this->title = 'Заявки';
                 ?>
                 <div class="jumbotron" style="margin-top:60px; margin-bottom:280px;">
                   <h1>Здравствуй, пользователь!</h1>
-                  <p>Посмотреть новые заявки можно здесь</p>
+                  <p>Посмотреть новые заявки или комментарии можно здесь</p>
                      <p>
                         <?= HTML::a('Заявки', ['req/index'],['class'=>'btn btn-primary btn-lg']) ?>
                      </p>
+                     <p>
+                     <?= HTML::a('Комментарии', ['comments/index'],['class'=>'btn btn-info btn-lg']) ?>
+                      </p>
                 </div>
                 <?php
             }?>

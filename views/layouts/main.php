@@ -27,12 +27,12 @@ AppAsset::register($this);
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />  
 </head>
-<body class="skin-blue sidebar-mini <?= $_COOKIE['sidebar'] ;?>">
+<body class="skin-blue sidebar-mini <?php if(isset($_COOKIE['sidebar'])) echo $_COOKIE['sidebar'] ;?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">    
                 <!-- Logo -->
-                 <a href="<?= Url::to(['req/index'])?>" class="logo">
+                 <a href="<?= Url::to(['site/index'])?>" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini"><b>H</b>D</span>
                     <!-- logo for regular state and mobile devices -->
@@ -46,27 +46,17 @@ AppAsset::register($this);
                     </a>
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
-                         
-                            
-                            <!-- Tasks: style can be found in dropdown.less -->
-                            
-                            <!-- User Account: style can be found in dropdown.less -->
+                             <!-- Tasks: style can be found in dropdown.less -->
+                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown">
-                              
-                                
-                                 
-                                    
-                                       <?php 
+                                      <?php 
                                        if (Yii::$app->user->isGuest){ 
                                             echo Html::a('Войти в систему', ['/site/login']) ;
                                             }else{
                                             echo Html::a('Покинуть систему', ['/site/logout'], ['data-method' => 'post'] );
                                         }
                                     ?>
-                                    
-                                
-                            </li>
-                           
+                             </li>     
                         </ul>
                     </div>
                 </nav>
@@ -75,9 +65,7 @@ AppAsset::register($this);
             <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
-                  
-                   
-                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                   <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                     <li class="header">Главное меню</li>
                         <li>
@@ -111,7 +99,6 @@ AppAsset::register($this);
                                 <li> <a href="<?= Url::to(['defects/index'])?>"><i class="fa fa-circle-o"></i>Дефекты</a></li>
                                 <li> <a href="<?= Url::to(['department/index'])?>"><i class="fa fa-circle-o"></i>Отделы</a></li>
                                 <li> <a href="<?= Url::to(['jobs/index'])?>"><i class="fa fa-circle-o"></i>Должности</a></li>
-                                <li> <a href="<?= Url::to(['priority/index'])?>"><i class="fa fa-circle-o"></i>Приоритет</a></li>
                                 <li> <a href="<?= Url::to(['users/index'])?>"><i class="fa fa-circle-o"></i>Пользователи</a></li>
                             </ul>
                         </li>

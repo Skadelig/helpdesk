@@ -12,8 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="defects-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+  
     <p>
         <?= Html::a('Редактировать', ['update', 'id' => $model->Defects_ID], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->Defects_ID], [

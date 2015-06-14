@@ -6,14 +6,13 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Comments */
 
-$this->title = $model->Comment_ID;
+$this->title = (substr(($model->Comment_txt),0,50)).'...';
 $this->params['breadcrumbs'][] = ['label' => 'Комментарии', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="comments-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    
     <p>
         <?= Html::a('Обновить', ['update', 'id' => $model->Comment_ID], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->Comment_ID], [

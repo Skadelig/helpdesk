@@ -12,13 +12,13 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="department-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Создать отдел', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+ <div class="box">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -34,5 +34,5 @@ $this->params['breadcrumbs'][] = $this->title;
               'template'=>'{update} {view}'],
         ],
     ]); ?>
-
+</div>
 </div>

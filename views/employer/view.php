@@ -13,8 +13,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="employer-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <p>
         <?= Html::a('Обновить', ['update', 'id' => $model->Employer_ID], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Статистика сотрудника', ['userstats', 'id' => $model->Employer_ID], ['class' => 'btn btn-warning']) ?>

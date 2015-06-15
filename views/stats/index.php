@@ -54,14 +54,15 @@
     <div class="col-lg-4 col-xs-6">
         <div class="small-box bg-red">
             <div class="inner">
-                <h3>0</h3>
+                <h3><?= $model->reddate ?></h3>
                 <p>Просрочено </p>
             </div>
             <div class="icon"> <i class="fa fa-exclamation"></i></div>
-            <a href="#" class="small-box-footer">
+            <a href="<?=URL::to(['stats/reddate'])?>" class="small-box-footer">
            Подробнее
            <i class="fa fa-arrow-circle-right"></i>
        </a>
         </div>
     </div>
+  
 </div>

@@ -25,7 +25,7 @@
                 <h3><?= $model->thismounth ?></h3>
                 <p>Выполнено в этом месяце </p>
             </div>
-            <div class="icon"> <i class="ion ion-stats-bars"></i></div>
+            <div class="icon"> <i class="fa fa-bar-chart"></i></div>
       <a href="#" class="small-box-footer">
            Подробнее
            <i class="fa fa-arrow-circle-right"></i>

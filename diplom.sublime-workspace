@@ -267,6 +267,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "views/comments/view.php",
+			"settings":
+			{
+				"buffer_size": 1219,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/stats/index.php",
+			"settings":
+			{
+				"buffer_size": 1906,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "models/Users.php",
+			"settings":
+			{
+				"buffer_size": 5811,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -318,114 +342,129 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www",
-		"/C/wamp/www/mail/layouts",
+		"/C/wamp/www/assets",
 		"/C/wamp/www/models",
-		"/C/wamp/www/vendor/yiisoft/yii2",
 		"/C/wamp/www/views",
-		"/C/wamp/www/views/access",
-		"/C/wamp/www/views/comments",
-		"/C/wamp/www/views/layouts",
-		"/C/wamp/www/views/stat",
-		"/C/wamp/www/views/users"
+		"/C/wamp/www/views/req",
+		"/C/wamp/www/views/stats",
+		"/C/wamp/www/web",
+		"/C/wamp/www/web/js"
 	],
 	"file_history":
 	[
-		"/C/wamp/www/views/site/index.php",
-		"/C/wamp/www/views/layouts/main.php",
-		"/C/wamp/www/views/stat/index.php",
-		"/C/wamp/www/views/access/index.php",
-		"/C/wamp/www/models/Access.php",
-		"/C/wamp/www/views/comments/index.php",
-		"/C/wamp/www/views/site/login.php",
-		"/C/wamp/www/views/users/index.php",
-		"/C/wamp/www/models/RequestsSearch.php",
-		"/C/wamp/www/views/req/index.php",
-		"/C/wamp/www/models/Defects.php",
-		"/C/wamp/www/controllers/ReqController.php",
-		"/C/wamp/www/views/defects/index.php",
-		"/C/wamp/www/controllers/DefectsController.php",
-		"/C/wamp/www/views/req/_search.php",
-		"/C/wamp/www/views/employer/_search.php",
-		"/C/wamp/www/views/employer/index.php",
-		"/C/wamp/www/views/comments/_search.php",
-		"/C/wamp/www/controllers/CommentsController.php",
-		"/C/wamp/www/views/department/index.php",
-		"/C/wamp/www/views/jobs/index.php",
-		"/C/wamp/www/views/priority/index.php",
-		"/C/wamp/www/views/site/signup.php",
-		"/C/wamp/www/views/jobs/view.php",
-		"/C/wamp/www/views/department/view.php",
-		"/C/wamp/www/views/comments/view.php",
-		"/C/wamp/www/views/employer/view.php",
 		"/C/wamp/www/views/req/view.php",
-		"/C/wamp/www/views/users/view.php",
-		"/C/wamp/www/views/comments/_form.php",
-		"/C/wamp/www/views/comments/create.php",
-		"/C/wamp/www/views/comments/update.php",
-		"/C/wamp/www/models/Jobs.php",
-		"/C/wamp/www/controllers/SiteController.php",
-		"/C/wamp/www/views/access/view.php",
-		"/C/wamp/www/views/defects/view.php",
 		"/C/wamp/www/models/Requests.php",
+		"/C/wamp/www/models/Comments.php",
+		"/C/wamp/www/views/stats/index.php",
+		"/C/wamp/www/views/comments/create.php",
+		"/C/wamp/www/views/comments/index.php",
+		"/C/wamp/www/controllers/CommentsController.php",
+		"/C/wamp/www/views/users/index.php",
+		"/C/wamp/www/views/comments/update.php",
+		"/C/wamp/www/config/web.php",
+		"/C/wamp/www/config/params.php",
+		"/C/wamp/www/commands/HelloController.php",
+		"/C/wamp/www/controllers/SiteController.php",
+		"/C/wamp/www/web/js/app.js",
+		"/C/wamp/www/assets/AppAsset.php",
+		"/C/wamp/www/views/req/index.php",
+		"/C/wamp/www/views/req/notdone.php",
+		"/C/wamp/www/views/comments/view.php",
+		"/C/wamp/www/views/users/view.php",
+		"/C/wamp/www/views/priority/view.php",
+		"/C/wamp/www/views/jobs/view.php",
+		"/C/wamp/www/views/employer/view.php",
+		"/C/wamp/www/views/employer/update.php",
+		"/C/wamp/www/views/department/view.php",
+		"/C/wamp/www/views/defects/view.php",
+		"/C/wamp/www/views/access/view.php",
+		"/C/wamp/www/models/LoginForm.php",
+		"/C/wamp/www/views/layouts/main.php",
+		"/C/wamp/www/views/req/update.php",
+		"/C/wamp/www/views/access/update.php",
+		"/C/wamp/www/models/Access.php",
+		"/C/wamp/www/views/defects/update.php",
+		"/C/wamp/www/models/Defects.php",
+		"/C/wamp/www/models/Employer.php",
+		"/C/wamp/www/views/jobs/update.php",
+		"/C/wamp/www/models/Jobs.php",
+		"/C/wamp/www/views/priority/update.php",
+		"/C/wamp/www/models/Priority.php",
+		"/C/wamp/www/views/users/update.php",
+		"/C/wamp/www/models/Users.php",
+		"/C/wamp/www/models/User.php",
+		"/C/wamp/www/views/department/update.php",
+		"/C/wamp/www/models/Department.php",
+		"/C/wamp/www/views/users/create.php",
+		"/C/wamp/www/views/site/signup.php",
+		"/C/wamp/www/views/site/login.php",
+		"/C/wamp/www/views/site/about.php",
+		"/C/wamp/www/views/req/create.php",
+		"/C/wamp/www/views/priority/create.php",
+		"/C/wamp/www/views/priority/index.php",
+		"/C/wamp/www/views/jobs/_form.php",
+		"/C/wamp/www/views/jobs/_search.php",
+		"/C/wamp/www/views/jobs/create.php",
+		"/C/wamp/www/views/jobs/index.php",
+		"/C/wamp/www/views/employer/_form.php",
+		"/C/wamp/www/views/employer/_search.php",
+		"/C/wamp/www/views/employer/create.php",
+		"/C/wamp/www/views/employer/index.php",
+		"/C/wamp/www/views/employer/userstats.php",
+		"/C/wamp/www/views/department/_form.php",
+		"/C/wamp/www/views/department/_search.php",
+		"/C/wamp/www/views/department/create.php",
+		"/C/wamp/www/views/department/index.php",
+		"/C/wamp/www/views/defects/_form.php",
+		"/C/wamp/www/views/defects/_search.php",
+		"/C/wamp/www/views/defects/create.php",
+		"/C/wamp/www/views/defects/index.php",
+		"/C/wamp/www/views/comments/_commentsfor.php",
+		"/C/wamp/www/views/comments/_form.php",
+		"/C/wamp/www/views/comments/_formshort.php",
+		"/C/wamp/www/views/comments/_search.php",
+		"/C/wamp/www/views/access/_form.php",
+		"/C/wamp/www/views/access/_search.php",
+		"/C/wamp/www/views/access/create.php",
+		"/C/wamp/www/web/css/AdminLTE.css",
+		"/C/wamp/www/web/css/AdminLTE.min.css",
+		"/C/wamp/www/web/css/site.css",
+		"/C/wamp/www/views/site/index.php",
+		"/C/wamp/www/views/site/error.php",
+		"/C/wamp/www/views/site/contact.php",
+		"/C/wamp/www/views/access/index.php",
+		"/C/wamp/www/controllers/StatsController.php",
+		"/C/wamp/www/composer.json",
+		"/C/wamp/www/controllers/DefectsController.php",
+		"/C/wamp/www/config/console.php",
+		"/C/wamp/www/config/db.php",
+		"/C/wamp/www/models/ContactForm.php",
+		"/C/wamp/www/controllers/StatController.php",
+		"/C/wamp/www/controllers/EmployerController.php",
+		"/C/wamp/www/views/stat/index.php",
+		"/C/wamp/www/models/RequestsSearch.php",
+		"/C/wamp/www/controllers/ReqController.php",
+		"/C/wamp/www/views/req/_search.php",
 		"/C/wamp/www/index.php",
 		"/C/wamp/www/vendor/yiisoft/yii2/BaseYii.php",
 		"/C/wamp/www/vendor/yiisoft/yii2/Yii.php",
-		"/C/wamp/www/config/web.php",
 		"/C/wamp/www/vendor/autoload.php",
-		"/C/wamp/www/models/Department.php",
-		"/C/wamp/www/models/Employer.php",
-		"/C/wamp/www/views/priority/view.php",
-		"/C/wamp/www/views/site/error.php",
-		"/C/wamp/www/models/Priority.php",
-		"/C/wamp/www/models/Users.php",
 		"/C/wamp/www/views/req/_form.php",
-		"/C/wamp/www/views/defects/update.php",
-		"/C/wamp/www/views/defects/create.php",
-		"/C/wamp/www/views/defects/_search.php",
-		"/C/wamp/www/views/defects/_form.php",
-		"/C/wamp/www/views/req/update.php",
-		"/C/wamp/www/views/req/create.php",
-		"/C/wamp/www/views/employer/create.php",
-		"/C/wamp/www/models/Comments.php",
 		"/C/wamp/www/layout/index.html",
 		"/C/wamp/www/models/SignupForm.php",
-		"/C/wamp/www/models/LoginForm.php",
-		"/C/wamp/www/views/site/contact.php",
-		"/C/wamp/www/views/site/about.php",
 		"/C/Users/Skadelig/Desktop/project/index",
 		"/C/wamp/www/models/AccessSearch.php",
 		"/C/wamp/www/models/EmployerSearch.php",
 		"/C/wamp/www/views/priority/_search.php",
 		"/C/wamp/www/models/UsersSearch.php",
-		"/C/wamp/www/models/User.php",
 		"/C/wamp/www/models/PrioritySearch.php",
 		"/C/wamp/www/models/JobsSearch.php",
 		"/C/wamp/www/models/DepartmentSearch.php",
 		"/C/wamp/www/models/DefectsSearch.php",
-		"/C/wamp/www/models/ContactForm.php",
 		"/C/wamp/www/models/CommentsSearch.php",
-		"/C/wamp/www/views/access/_form.php",
-		"/C/wamp/www/views/department/_form.php",
-		"/C/wamp/www/views/employer/_form.php",
-		"/C/wamp/www/views/jobs/_form.php",
 		"/C/wamp/www/views/priority/_form.php",
 		"/C/wamp/www/views/users/_form.php",
-		"/C/wamp/www/views/users/create.php",
 		"/C/wamp/www/views/users/_search.php",
-		"/C/wamp/www/views/users/update.php",
-		"/C/wamp/www/views/priority/update.php",
-		"/C/wamp/www/views/priority/create.php",
-		"/C/wamp/www/views/jobs/create.php",
-		"/C/wamp/www/views/jobs/_search.php",
-		"/C/wamp/www/views/jobs/update.php",
-		"/C/wamp/www/views/employer/update.php",
-		"/C/wamp/www/views/department/_search.php",
-		"/C/wamp/www/views/department/create.php",
-		"/C/wamp/www/views/department/update.php",
-		"/C/wamp/www/views/access/_search.php",
-		"/C/wamp/www/views/access/create.php",
-		"/C/wamp/www/views/access/update.php",
-		"/C/wamp/www/config/db.php",
 		"/C/wamp/www/README.md",
 		"/Users/r/Projects/yii2/server/basic/controllers/PostsController.php",
 		"/Users/r/Projects/diplom/controllers/PostController.html",
@@ -440,24 +479,7 @@
 		"/Volumes/Users/Public/ВКР/Script/lastscript2.sql",
 		"/Volumes/Users/Public/ВКР/Script/db2.sql",
 		"/Users/r/Projects/yii2/server/basic/views/users/index.php",
-		"/Users/r/Projects/yii2/posts.sql",
-		"/Users/r/Projects/yii2/users.sql",
-		"/Users/r/Projects/yii2/server/basic/controllers/RomaController.php",
-		"/Users/r/Projects/yii2/server/basic/controllers/SiteController.php",
-		"/Users/r/Projects/yii2/server/basic/views/site/say.php",
-		"/private/etc/apache2/httpd.conf",
-		"/usr/local/etc/php/5.6/php.ini",
-		"/Users/r/Projects/yii2/server/basic/models/User.php",
-		"/Users/r/Projects/yii2/server/basic/config/db.php",
-		"/Users/r/Projects/mantii/less/layout.less",
-		"/private/etc/apache2/extra/httpd-vhosts.conf",
-		"/Users/r/Projects/diplom/index",
-		"/Users/r/Library/Application Support/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/config.cfg",
-		"/Users/r/Library/Application Support/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/start.cfg",
-		"/private/var/folders/hz/jk9k7mln2ws1mjc56fl3h6ph0000gp/T/dc3e9ab6-d3a9-4dec-9879-eebb8aed2a66/mantii/public_html/index.html",
-		"/private/var/folders/hz/jk9k7mln2ws1mjc56fl3h6ph0000gp/T/dc3e9ab6-d3a9-4dec-9879-eebb8aed2a66/mantii/public_html/mail.php",
-		"/private/var/folders/hz/jk9k7mln2ws1mjc56fl3h6ph0000gp/T/dc3e9ab6-d3a9-4dec-9879-eebb8aed2a66/mantii/public_html/review.php",
-		"/Users/r/Downloads/jumpandthrow.cfg"
+		"/Users/r/Projects/yii2/posts.sql"
 	],
 	"find":
 	{
@@ -476,6 +498,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"№",
+			"checkb",
+			".main-sidebar",
+			"width:230px;",
+			".sidebar",
+			".main-sidebar",
+			"*.css",
+			"Заявк",
+			"kartic",
+			"modules",
 			"<?",
 			"home",
 			" \n",
@@ -593,16 +625,6 @@
 			"http://cspto70.ru/wp-content/",
 			"\"color: #555555;\"",
 			"-",
-			"background-color: #f5f5f5;",
-			"</p>",
-			"<p>",
-			"width=\"29\"",
-			"width=\"201\"",
-			"width=\"117\"",
-			"width=\"104\"",
-			"width=\"102\"",
-			"width=\"116\"",
-			"align=\"center\"",
 			"background-color: #f5f5f5;"
 		],
 		"highlight": true,
@@ -621,8 +643,99 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "views/comments/view.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1000,
+								1000
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/stats/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								874,
+								874
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "models/Users.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2251,
+								2262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -703,7 +816,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 236.0,
+	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

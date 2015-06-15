@@ -5,7 +5,7 @@ use app\models\Priority;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\RequestsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-$this->title = 'Заявки';
+$this->title = '';
 ?>
 <div class="site-index">
         <div class="row">
@@ -21,7 +21,7 @@ $this->title = 'Заявки';
                         <?= HTML::a('Войти', ['site/login'],['class'=>'btn btn-success btn-lg']) ?>
                      </p>
                 </div>
-                s<?php
+                <?php
             }else{
                 ?>
                 <div class="jumbotron" style="margin-top:60px; margin-bottom:280px;">

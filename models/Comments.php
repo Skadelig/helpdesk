@@ -67,13 +67,13 @@ class Comments extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Users::className(), ['Users_id' => 'Users_id']);
     }
-    public function beforeSave($insert)
-    {
-            if($date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Comment_date))
-            $this->Comment_date = $date->format('Y-m-d H:i:s');
+    // public function beforeSave($insert)
+    // {
+    //         if($date = \Datetime::createFromFormat('d-m-Y H:i:s', $this->Comment_date))
+    //         $this->Comment_date = $date->format('Y-m-d H:i:s');
         
-            return true;
-    }
+    //         return true;
+    // }
     
 
 }

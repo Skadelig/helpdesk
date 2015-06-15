@@ -27,8 +27,6 @@ class StatsController extends Controller
      */
     public function actionIndex()
     {
-         
-       
          $model = new EmployerStats();
          $model->findStatsall();
          return $this->render('index',['model'=>$model]);
@@ -50,6 +48,12 @@ class StatsController extends Controller
          $model = new EmployerStats();
          $model->findStatsdone();
          return $this->render('inwork',['model'=>$model]);
+    }
+    public function actionReddate()
+    {
+        $model = new EmployerStats(); 
+        $model->findStatsreddate(); 
+        return echo $this->render('reddate',['model'=>$model]);
     }
 }
 ?>

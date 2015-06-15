@@ -12,7 +12,7 @@ class EmployerStats extends Model
     public $done;
     public $inwork;
     public $thismounth;
-
+    public $reddate; 
     private $employer_id;
     public function attributeLabels()
     {
@@ -20,6 +20,7 @@ class EmployerStats extends Model
             'done' => 'Выполнено',
             'inwork' => 'В работе',
             'thismounth' => 'В этом месяце',
+            'reddate' => 'Просроченно',
         ];
     }
     public function findStatsuser($id)
@@ -30,6 +31,7 @@ class EmployerStats extends Model
     	$this->done = $this->getDone();
     	$this->inwork = $this->getInwork();
     	$this->thismounth = $this->getThismounth();
+        $this->reddate = $this->getReddate();
     	$this->username = $employer->Employer_name.' '.$employer->Employer_surname;
     }
     public function findStatsall()
@@ -39,6 +41,7 @@ class EmployerStats extends Model
         $this->done = $this->getDone();
         $this->inwork = $this->getInwork();
         $this->thismounth = $this->getThismounth();
+        $this->reddate = $this->getReddate(); 
        
     }
     public function getEmployer($id)
@@ -82,11 +85,20 @@ class EmployerStats extends Model
     	 		->andWhere(['<', 'Request_date', '2015-6-31 23:59:59'])
             		
             			->count()
-
             	; 
 
     	return $query;
     }
+    public function getReddate(){
+       $query=Requests::find()
+        ->filterWhere(['Users_id' => $this->employer_id])
+        ->andWhere(['>', 'Request_FacticalDateEnding', 'Request_DataEnding'])
+
+        ->count()
+        ;
+        return $query; 
+    }
+
     public function findStatsdone(){
                 $query = Requests::find()
         // ->select('COUNT(*)')
@@ -110,6 +122,13 @@ class EmployerStats extends Model
                 ;
                
         return $query;
+     }
+     public function findStatsreddate(){
+        $query=Requests::find()
+        ->filterWhere(['Users_id' => $this->employer_id])
+        ->andFilterWhere(['>', 'Request_FacticalDateEnding', 'Request_DataEnding'])
+        ->all()
+        ;
      }
       public function findStatsmounth(){
         

@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Request; 
+use app\models\Users; 
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Comments */
@@ -28,8 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Comment_ID',
-            'Request_ID',
-            'Users_id',
+            'request.Request_text',
+            // 'Request_ID',
+            'users.Users_login',
+           // 'Users_id',
             [
                 'attribute'=>'Comment_date',
                 'format' => ['date', 'php:d.m.Y h:i:s']

@@ -121,6 +121,6 @@ class Requests extends \yii\db\ActiveRecord
     }
     public function getExecutionstatusLabel()
     {
-        return $this->Executionstatus ? '<i class="fa fa-check" style="color:green"></i>' : '<i class="fa fa-times" style="color:red"></i>';
+        return $this->Executionstatus ? '<i class="fa fa-times" style="color:red"></i>' : '<i class="fa fa-check" style="color:green"></i>';
     }
 }

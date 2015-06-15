@@ -90,10 +90,8 @@ class EmployerStats extends Model
     	return $query;
     }
     public function getReddate(){
-       $query=Requests::find()
+       $query=Requests::findBySql("SELECT COUNT(*) FROM `Request` WHERE `Request_FacticalDateEnding` > `Request_DataEnding`")
         ->filterWhere(['Users_id' => $this->employer_id])
-        ->andWhere(['>', 'Request_FacticalDateEnding', 'Request_DataEnding'])
-
         ->count()
         ;
         return $query; 
@@ -124,11 +122,11 @@ class EmployerStats extends Model
         return $query;
      }
      public function findStatsreddate(){
-        $query=Requests::find()
-        ->filterWhere(['Users_id' => $this->employer_id])
-        ->andFilterWhere(['>', 'Request_FacticalDateEnding', 'Request_DataEnding'])
+        $query=Requests::findBySql("SELECT COUNT(*) FROM `Request` WHERE `Request_FacticalDateEnding` > `Request_DataEnding`")
+        
         ->all()
         ;
+         return $query;
      }
       public function findStatsmounth(){
         

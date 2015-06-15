@@ -26,13 +26,8 @@
                 <h3><?= $model->thismounth ?></h3>
                 <p>Выполнено в этом месяце </p>
             </div>
-<<<<<<< HEAD
-            <div class="icon"> <i class="fa fa-bar-chart"></i></div>
-      <a href="#" class="small-box-footer">
-=======
             <div class="icon"> <i class="ion ion-stats-bars"></i></div>
-      <a href="<?=URL::to(['stats/thismonth'])?>" class="small-box-footer">
->>>>>>> 0849ede3f304c473b09b97500e7ef13c0bd9378b
+            <a href="<?=URL::to(['stats/thismonth'])?>" class="small-box-footer">
            Подробнее
            <i class="fa fa-arrow-circle-right"></i>
        </a>

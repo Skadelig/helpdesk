@@ -1,0 +1,912 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Emp",
+				"EmployerStats"
+			],
+			[
+				"Requ",
+				"Request_FacticalDateEnding"
+			],
+			[
+				"and",
+				"andFilterWhere"
+			],
+			[
+				"emp",
+				"employer_id"
+			],
+			[
+				"Users_",
+				"Users_login"
+			],
+			[
+				"Prior",
+				"Priority_ID"
+			],
+			[
+				"cas",
+				"CASCADE"
+			],
+			[
+				"au",
+				"author_id"
+			],
+			[
+				"конфеде",
+				"конфедератки"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"text",
+				"text-indent"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"padidng",
+				"padding-left"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"sans",
+				"sans-serif"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"fancy",
+				"fancybox"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"br",
+				"border-radius"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"re",
+				"remove"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"pos",
+				"pos-r	position: relative;"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"p",
+				"preventDefault"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"arrow-",
+				"arrow-right"
+			],
+			[
+				"arrow",
+				"arrow-left"
+			],
+			[
+				"bg",
+				"bg+	background: ${1:#fff} url(${2}) ${3:0} ${4:0} ${5:no-repeat};"
+			],
+			[
+				"DATE_",
+				"DATE_ACTIVE_FROM"
+			],
+			[
+				"endfo",
+				"endforeach"
+			],
+			[
+				"Get",
+				"GetNext"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"rgb",
+				"rgba(r,g,b,a)"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"magr",
+				"margin-bottom"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"pos-",
+				"pos-r	position: relative;"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"po",
+				"pos-r	position: relative;"
+			],
+			[
+				"mag",
+				"margin-left"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"v-a",
+				"va-t	vertical-align: top;"
+			],
+			[
+				"bg-i",
+				"background-image"
+			],
+			[
+				"boder",
+				"border-radius"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"c",
+				"cursor"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views/stats/index.php",
+			"settings":
+			{
+				"buffer_size": 2103,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/stats/inwork.php",
+			"settings":
+			{
+				"buffer_size": 855,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/stats/reddate.php",
+			"settings":
+			{
+				"buffer_size": 997,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/stats/thismonth.php",
+			"settings":
+			{
+				"buffer_size": 854,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/stats/done.php",
+			"settings":
+			{
+				"buffer_size": 841,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Toggle Comment"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp/www",
+		"/C/wamp/www/assets",
+		"/C/wamp/www/controllers",
+		"/C/wamp/www/models",
+		"/C/wamp/www/views",
+		"/C/wamp/www/views/stats",
+		"/C/wamp/www/web",
+		"/C/wamp/www/web/js"
+	],
+	"file_history":
+	[
+		"/C/wamp/www/models/Requests.php",
+		"/C/wamp/www/models/EmployerStats.php",
+		"/C/wamp/www/controllers/StatsController.php",
+		"/C/wamp/www/views/req/index.php",
+		"/C/wamp/www/views/req/view.php",
+		"/C/wamp/www/views/employer/create.php",
+		"/C/wamp/www/views/employer/index.php",
+		"/C/wamp/www/models/Users.php",
+		"/C/wamp/www/views/stats/thismonth.php",
+		"/C/wamp/www/views/stats/inwork.php",
+		"/C/wamp/www/views/stats/reddate.php",
+		"/C/wamp/www/controllers/SiteController.php",
+		"/C/wamp/www/views/comments/view.php",
+		"/C/wamp/www/models/Comments.php",
+		"/C/wamp/www/views/stats/index.php",
+		"/C/wamp/www/views/comments/create.php",
+		"/C/wamp/www/views/comments/index.php",
+		"/C/wamp/www/controllers/CommentsController.php",
+		"/C/wamp/www/views/users/index.php",
+		"/C/wamp/www/views/comments/update.php",
+		"/C/wamp/www/config/web.php",
+		"/C/wamp/www/config/params.php",
+		"/C/wamp/www/commands/HelloController.php",
+		"/C/wamp/www/web/js/app.js",
+		"/C/wamp/www/assets/AppAsset.php",
+		"/C/wamp/www/views/req/notdone.php",
+		"/C/wamp/www/views/users/view.php",
+		"/C/wamp/www/views/priority/view.php",
+		"/C/wamp/www/views/jobs/view.php",
+		"/C/wamp/www/views/employer/view.php",
+		"/C/wamp/www/views/employer/update.php",
+		"/C/wamp/www/views/department/view.php",
+		"/C/wamp/www/views/defects/view.php",
+		"/C/wamp/www/views/access/view.php",
+		"/C/wamp/www/models/LoginForm.php",
+		"/C/wamp/www/views/layouts/main.php",
+		"/C/wamp/www/views/req/update.php",
+		"/C/wamp/www/views/access/update.php",
+		"/C/wamp/www/models/Access.php",
+		"/C/wamp/www/views/defects/update.php",
+		"/C/wamp/www/models/Defects.php",
+		"/C/wamp/www/models/Employer.php",
+		"/C/wamp/www/views/jobs/update.php",
+		"/C/wamp/www/models/Jobs.php",
+		"/C/wamp/www/views/priority/update.php",
+		"/C/wamp/www/models/Priority.php",
+		"/C/wamp/www/views/users/update.php",
+		"/C/wamp/www/models/User.php",
+		"/C/wamp/www/views/department/update.php",
+		"/C/wamp/www/models/Department.php",
+		"/C/wamp/www/views/users/create.php",
+		"/C/wamp/www/views/site/signup.php",
+		"/C/wamp/www/views/site/login.php",
+		"/C/wamp/www/views/site/about.php",
+		"/C/wamp/www/views/req/create.php",
+		"/C/wamp/www/views/priority/create.php",
+		"/C/wamp/www/views/priority/index.php",
+		"/C/wamp/www/views/jobs/_form.php",
+		"/C/wamp/www/views/jobs/_search.php",
+		"/C/wamp/www/views/jobs/create.php",
+		"/C/wamp/www/views/jobs/index.php",
+		"/C/wamp/www/views/employer/_form.php",
+		"/C/wamp/www/views/employer/_search.php",
+		"/C/wamp/www/views/employer/userstats.php",
+		"/C/wamp/www/views/department/_form.php",
+		"/C/wamp/www/views/department/_search.php",
+		"/C/wamp/www/views/department/create.php",
+		"/C/wamp/www/views/department/index.php",
+		"/C/wamp/www/views/defects/_form.php",
+		"/C/wamp/www/views/defects/_search.php",
+		"/C/wamp/www/views/defects/create.php",
+		"/C/wamp/www/views/defects/index.php",
+		"/C/wamp/www/views/comments/_commentsfor.php",
+		"/C/wamp/www/views/comments/_form.php",
+		"/C/wamp/www/views/comments/_formshort.php",
+		"/C/wamp/www/views/comments/_search.php",
+		"/C/wamp/www/views/access/_form.php",
+		"/C/wamp/www/views/access/_search.php",
+		"/C/wamp/www/views/access/create.php",
+		"/C/wamp/www/web/css/AdminLTE.css",
+		"/C/wamp/www/web/css/AdminLTE.min.css",
+		"/C/wamp/www/web/css/site.css",
+		"/C/wamp/www/views/site/index.php",
+		"/C/wamp/www/views/site/error.php",
+		"/C/wamp/www/views/site/contact.php",
+		"/C/wamp/www/views/access/index.php",
+		"/C/wamp/www/composer.json",
+		"/C/wamp/www/controllers/DefectsController.php",
+		"/C/wamp/www/config/console.php",
+		"/C/wamp/www/config/db.php",
+		"/C/wamp/www/models/ContactForm.php",
+		"/C/wamp/www/controllers/StatController.php",
+		"/C/wamp/www/controllers/EmployerController.php",
+		"/C/wamp/www/views/stat/index.php",
+		"/C/wamp/www/models/RequestsSearch.php",
+		"/C/wamp/www/controllers/ReqController.php",
+		"/C/wamp/www/views/req/_search.php",
+		"/C/wamp/www/index.php",
+		"/C/wamp/www/vendor/yiisoft/yii2/BaseYii.php",
+		"/C/wamp/www/vendor/yiisoft/yii2/Yii.php",
+		"/C/wamp/www/vendor/autoload.php",
+		"/C/wamp/www/views/req/_form.php",
+		"/C/wamp/www/layout/index.html",
+		"/C/wamp/www/models/SignupForm.php",
+		"/C/Users/Skadelig/Desktop/project/index",
+		"/C/wamp/www/models/AccessSearch.php",
+		"/C/wamp/www/models/EmployerSearch.php",
+		"/C/wamp/www/views/priority/_search.php",
+		"/C/wamp/www/models/UsersSearch.php",
+		"/C/wamp/www/models/PrioritySearch.php",
+		"/C/wamp/www/models/JobsSearch.php",
+		"/C/wamp/www/models/DepartmentSearch.php",
+		"/C/wamp/www/models/DefectsSearch.php",
+		"/C/wamp/www/models/CommentsSearch.php",
+		"/C/wamp/www/views/priority/_form.php",
+		"/C/wamp/www/views/users/_form.php",
+		"/C/wamp/www/views/users/_search.php",
+		"/C/wamp/www/README.md",
+		"/Users/r/Projects/yii2/server/basic/controllers/PostsController.php",
+		"/Users/r/Projects/diplom/controllers/PostController.html",
+		"/Users/r/Projects/diplom/controllers/RequestController.php",
+		"/Volumes/Users/Public/ВКР/Script/db1.sql",
+		"/Volumes/Users/Public/ВКР/Script/lastscript.sql",
+		"/Volumes/Users/Public/ВКР/Script/lastscript1.sql",
+		"/Users/r/Projects/diplom/web/css/site.css",
+		"/Users/r/Projects/diplom/index.php",
+		"/Volumes/Users/Public/ВКР/Script/lastscript11.sql",
+		"/Volumes/Users/Public/ВКР/Script/2.sql"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\wamp\\www"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"№",
+			"checkb",
+			".main-sidebar",
+			"width:230px;",
+			".sidebar",
+			".main-sidebar",
+			"*.css",
+			"Заявк",
+			"kartic",
+			"modules",
+			"<?",
+			"home",
+			" \n",
+			"int(11)",
+			"int",
+			"Users_login",
+			"Между",
+			"между",
+			".form-inline",
+			"wrap",
+			"col-xs",
+			"col-md",
+			"приложение",
+			"sel",
+			"col-md-4",
+			"192.168.0.2",
+			"\" \"",
+			"\"Helvetica Neue\"",
+			"font-family: \"Futura New\";",
+			"btn-big",
+			"fonts/",
+			"font-weight: 700",
+			"FuturaNewBold",
+			"font-family: \"Futura New\"",
+			"FuturaNewBook",
+			"Proxima Nova",
+			"window",
+			"data-wondow=\"1\"",
+			"data-locked=\"0\"",
+			"btn-orange",
+			"t",
+			"выпускного",
+			"$arResult1",
+			"$arResult1['ITEMS']",
+			"count:",
+			".logo",
+			"logo",
+			"pay-input",
+			"_POST",
+			"id=\"phone\"",
+			".modal-backdrop",
+			"block-group",
+			"arrow-left",
+			"</span>",
+			"style=\"line-height: 22.3999996185303px;\"><span style=\"line-height: 16px;\">",
+			"$match",
+			"short_open_tag",
+			"mbstr",
+			"local",
+			"php",
+			"virtualhost",
+			";\n",
+			"slide.jpg",
+			"element-item",
+			"f1f1f1",
+			"F1F1F1",
+			"sale1@putty-world.ru",
+			"action=\"\"",
+			"vali",
+			"row",
+			"-sm-",
+			" class=\"root-item\"",
+			"class=\"\"",
+			"\n	\n	\n\n	\n		",
+			"· ",
+			"style=\"font-family: 'Times New Roman';\"",
+			"class=\"MsoNormal\" style=\"margin-bottom: 0.0001pt;",
+			"</p>",
+			"<p>·",
+			"<o:p></o:p></span></p>",
+			"<p class=\"MsoNormal\" style=\"margin-left: 68.2pt; text-align: justify;\"><span style=\"font-family: 'Times New Roman'; color: rgb(60, 60, 63);\">-",
+			"style=\"box-sizing: border-box;\" ",
+			"height=\"17\"",
+			"width=\"135\"",
+			" width=\"73",
+			" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\"",
+			"width=\"167\"",
+			"width=\"48\" height=\"14\"",
+			"522",
+			"style=\"border-style: dashed; border-color: #bbbbbb; font-style: inherit; border-collapse: collapse; background-color: #ffffff",
+			" align=\"right\" height=\"17\"",
+			"style=\"border: 0px; font-style: inherit;\"",
+			" style=\"border: 0px; font-style: inherit; background-color: #f5f5f5;\"",
+			"style=\"border: 0px; color: #555555; background-color: #ffffff;\"",
+			"width=\"118\"",
+			"width=\"124\"",
+			" style=\"border-style: dashed; border-color: #bbbbbb; font-style: inherit;\"",
+			"width=\"65\"",
+			"<table ",
+			"border=\"1\" ",
+			"width=\"161\"",
+			"style=\"border: 0px; font-style: inherit; background-color: #f5f5f5;\"",
+			"width=\"83\"",
+			"width=\"113",
+			"width=\"252\"",
+			" style=\"border: 0px; font-style: inherit;\"",
+			" style=\"border: 0px; color: #555555; background-color: #ffffff;\"",
+			"<table",
+			"<th>",
+			"width=\"182\"",
+			"width=\"198\"",
+			"width=\"255\"",
+			"width=\"28\"",
+			"width=\"181\"",
+			"width=\"662\"",
+			"<table ",
+			"width=\"182\"",
+			"</li>\n</ol",
+			"<ol>\n	<li>",
+			"width=\"198\"",
+			"width=\"255\"",
+			"width=\"28\"",
+			"href=\"\"",
+			"style=\"font-style: inherit; color: #111111;\"",
+			"http://cspto70.ru/wp-content/",
+			"\"color: #555555;\"",
+			"-",
+			"background-color: #f5f5f5;"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/stats/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2103,
+								2103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/stats/inwork.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								535,
+								535
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/stats/reddate.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 493.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/stats/thismonth.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 186.0,
+						"translation.y": -0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/stats/done.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								396,
+								697
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": -0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "diplom.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

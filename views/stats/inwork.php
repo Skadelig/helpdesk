@@ -19,6 +19,9 @@
 		</thead>
 			<?php
 			foreach ($param as $value) {
+				 if($value->Request_date)	$Request_date = \Datetime::createFromFormat('Y-m-d H:i:s', $value->Request_date)->format('d-m-Y H:i:s');
+	       		 if($value->Request_DataEnding) $Request_DataEnding = \Datetime::createFromFormat('Y-m-d H:i:s', $value->Request_DataEnding)->format('d-m-Y H:i:s');
+             
 				echo"<tr><td>".$value->Request_text."</td><td>".$value->Request_date."</td><td>".$value->Request_DataEnding."</td></tr>";
 			}
 			?>

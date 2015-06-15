@@ -53,7 +53,7 @@ class StatsController extends Controller
     {
         $model = new EmployerStats(); 
         $model->findStatsreddate(); 
-        return echo $this->render('reddate',['model'=>$model]);
+        return $this->render('reddate',['model'=>$model]);
     }
 }
 ?>

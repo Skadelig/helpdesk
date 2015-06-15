@@ -122,7 +122,7 @@ class EmployerStats extends Model
         return $query;
      }
      public function findStatsreddate(){
-        $query=Requests::findBySql("SELECT COUNT(*) FROM `Request` WHERE `Request_FacticalDateEnding` > `Request_DataEnding`")
+        $query=Requests::findBySql("SELECT * FROM `Request` WHERE `Request_FacticalDateEnding` > `Request_DataEnding`")
         
         ->all()
         ;

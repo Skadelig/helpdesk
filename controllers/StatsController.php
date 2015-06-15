@@ -33,5 +33,23 @@ class StatsController extends Controller
          $model->findStatsall();
          return $this->render('index',['model'=>$model]);
     }
+    public function actionDone()
+    {
+         $model = new EmployerStats();
+         $model->findStatsdone();
+         return $this->render('done',['model'=>$model]);
+    }
+    public function actionThismonth()
+    {
+         $model = new EmployerStats();
+         $model->findStatsmounth();
+         return $this->render('thismonth',['model'=>$model]);
+    }
+    public function actionInwork()
+    {
+         $model = new EmployerStats();
+         $model->findStatsdone();
+         return $this->render('inwork',['model'=>$model]);
+    }
 }
 ?>

@@ -8,8 +8,15 @@
 	$param = $model->findStatsreddate();
 	?>
 	
-		
-	
+		<SCRIPT Language="Javascript"> 
+				function printit(){ 
+				window.print() ; 
+				} 
+		</script> 
+<form> 
+<input TYPE="button" CLASS="for" VALUE="распечатать страницу" onClick="printit()"> 
+</form>
+
 	<div class="box">
 		<table class="table table-striped table-bordered">
 		<thead>

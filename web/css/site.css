@@ -1,4 +1,4 @@
-html,
+@media screen{html,
 body {
     height: 100%;
 }
@@ -93,4 +93,20 @@ a.desc:after {
 .wrapper
 {
     background-color: #ecf0f5 !important;
+}
+form{display:block;}
+aside{display:block;}
+}
+@media print{
+    body{
+        font-family: 'TimesNewRoman'; 
+        background-color: none;
+        font-size: 14pt;
+    }
+    form{display:none;}
+    table{margin-left: -150px;}
+    header{display: none;}
+    footer{
+        display:none;
+    }
 }

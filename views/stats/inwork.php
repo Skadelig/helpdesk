@@ -8,7 +8,19 @@
 	$param = $model->findStatsinwork();
 	?>
 	
-		
+		 <!-- <p>
+      	  <?= Html::a('Печать', ['update', 'id', ['class' => 'btn btn-primary']]) ?> 
+  		</p> -->
+
+		<SCRIPT Language="Javascript"> 
+				function printit(){ 
+				window.print() ; 
+				} 
+		</script> 
+<form> 
+<input TYPE="button" CLASS="for" VALUE="распечатать страницу" onClick="printit()"> 
+</form>
+
 	
 	<div class="box">
 		<table class="table table-striped table-bordered">

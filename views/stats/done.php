@@ -1,7 +1,7 @@
 <?php 
 	use yii\helpers\Html;
 	use yii\grid\GridView;
-	use kartik\export\ExportMenu; 
+	
 
 	$this->title = 'Статистика';
 	$this->params['breadcrumbs'][] = $this->title;

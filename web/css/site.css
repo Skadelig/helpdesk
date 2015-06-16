@@ -106,6 +106,9 @@ aside{display:block;}
     form{display:none;}
     table{margin-left: -150px;}
     header{display: none;}
+    .content-header h1{
+        display:inline-block;
+    }
     footer{
         display:none;
     }

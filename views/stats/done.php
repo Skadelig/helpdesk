@@ -15,8 +15,8 @@
 				} 
 	</script> 
 	<form class="report"> 
-			<button class="btn" onclick="printit()"><i class="fa fa-print fa-2x"></i><br>Печать</button>
-			<a href="<?=URL::to(['stats/reportdone'])?>" class="btn"><i class="fa fa-file-pdf-o fa-2x"></i>
+			<button class="btn btn-stats" onclick="printit()"><i class="fa fa-print fa-2x"></i><br>Печать</button>
+			<a href="<?=URL::to(['stats/reportdone'])?>" class="btn btn-stats"><i class="fa fa-file-pdf-o fa-2x"></i>
 			<br>PDF</a>
 	</form>
 

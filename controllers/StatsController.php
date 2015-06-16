@@ -58,7 +58,7 @@ class StatsController extends Controller
         return $this->render('reddate',['model'=>$model]);
     }
 
-    public function actionReport() {
+    public function actionReportdone() {
     // get your HTML raw content without any layouts or scripts
            $model = new EmployerStats();
     $model->findStatsdone();   
@@ -67,7 +67,7 @@ class StatsController extends Controller
     // setup kartik\mpdf\Pdf component
     $pdf = new Pdf([
         // set to use core fonts only
-        'mode' => Pdf::MODE_CORE, 
+        'mode' => Pdf::MODE_UTF8, 
         // A4 paper format
         'format' => Pdf::FORMAT_A4, 
         // portrait orientation
@@ -78,17 +78,141 @@ class StatsController extends Controller
         'content' => $content,  
         // format content from your own css file if needed or use the
         // enhanced bootstrap css built by Krajee for mPDF formatting 
-        'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
+        'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.css',
         // any css to be embedded if required
         'cssInline' => '.kv-heading-1{font-size:18px}', 
          // set mPDF properties on the fly
         'options' => ['title' => 'Krajee Report Title'],
          // call mPDF methods on the fly
         'methods' => [ 
-            'SetHeader'=>['Rep0rt'], 
+            'SetHeader'=>['Отчет'], 
             'SetFooter'=>['{PAGENO}'],
         ]
     ]);
+
+    $p = $pdf->render();
+    $len = strlen($p);
+    Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+    $headers = Yii::$app->response->headers;
+    $headers->add('Content-Type', 'application/pdf');
+        // return the pdf output as per the destination setting
+        return $p; 
+    }
+    //inwork
+     public function actionReportinwork() {
+    // get your HTML raw content without any layouts or scripts
+           $model = new EmployerStats();
+    $model->findStatsinwork();   
+    $content = $this->renderPartial('inwork', ['model'=>$model]);
+
+    // setup kartik\mpdf\Pdf component
+    $pdf = new Pdf([
+        // set to use core fonts only
+        'mode' => Pdf::MODE_UTF8, 
+        // A4 paper format
+        'format' => Pdf::FORMAT_A4, 
+        // portrait orientation
+        'orientation' => Pdf::ORIENT_PORTRAIT, 
+        // stream to browser inline
+        'destination' => Pdf::DEST_BROWSER, 
+        // your html content input
+        'content' => $content,  
+        // format content from your own css file if needed or use the
+        // enhanced bootstrap css built by Krajee for mPDF formatting 
+        'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.css',
+        // any css to be embedded if required
+        'cssInline' => '.kv-heading-1{font-size:18px}', 
+         // set mPDF properties on the fly
+        'options' => ['title' => 'Krajee Report Title'],
+         // call mPDF methods on the fly
+        'methods' => [ 
+            'SetHeader'=>['Отчет'], 
+            'SetFooter'=>['{PAGENO}'],
+        ]
+    ]);
+
+    $p = $pdf->render();
+    $len = strlen($p);
+    Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+    $headers = Yii::$app->response->headers;
+    $headers->add('Content-Type', 'application/pdf');
+        // return the pdf output as per the destination setting
+        return $p; 
+    }
+    //reddate
+     public function actionReportreddate() {
+    // get your HTML raw content without any layouts or scripts
+           $model = new EmployerStats();
+    $model->findStatsreddate();   
+    $content = $this->renderPartial('reddate', ['model'=>$model]);
+
+    // setup kartik\mpdf\Pdf component
+    $pdf = new Pdf([
+        // set to use core fonts only
+        'mode' => Pdf::MODE_UTF8, 
+        // A4 paper format
+        'format' => Pdf::FORMAT_A4, 
+        // portrait orientation
+        'orientation' => Pdf::ORIENT_PORTRAIT, 
+        // stream to browser inline
+        'destination' => Pdf::DEST_BROWSER, 
+        // your html content input
+        'content' => $content,  
+        // format content from your own css file if needed or use the
+        // enhanced bootstrap css built by Krajee for mPDF formatting 
+        'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.css',
+        // any css to be embedded if required
+        'cssInline' => '.kv-heading-1{font-size:18px}', 
+         // set mPDF properties on the fly
+        'options' => ['title' => 'Krajee Report Title'],
+         // call mPDF methods on the fly
+        'methods' => [ 
+            'SetHeader'=>['Отчет'], 
+            'SetFooter'=>['{PAGENO}'],
+        ]
+    ]);
+
+    $p = $pdf->render();
+    $len = strlen($p);
+    Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+    $headers = Yii::$app->response->headers;
+    $headers->add('Content-Type', 'application/pdf');
+        // return the pdf output as per the destination setting
+        return $p; 
+    }
+    //thismonth
+      public function actionReportthismonth() {
+    // get your HTML raw content without any layouts or scripts
+           $model = new EmployerStats();
+    $model->findStatsmounth();   
+    $content = $this->renderPartial('thismonth', ['model'=>$model]);
+
+    // setup kartik\mpdf\Pdf component
+    $pdf = new Pdf([
+        // set to use core fonts only
+        'mode' => Pdf::MODE_UTF8, 
+        // A4 paper format
+        'format' => Pdf::FORMAT_A4, 
+        // portrait orientation
+        'orientation' => Pdf::ORIENT_PORTRAIT, 
+        // stream to browser inline
+        'destination' => Pdf::DEST_BROWSER, 
+        // your html content input
+        'content' => $content,  
+        // format content from your own css file if needed or use the
+        // enhanced bootstrap css built by Krajee for mPDF formatting 
+        'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.css',
+        // any css to be embedded if required
+        'cssInline' => '.kv-heading-1{font-size:18px}', 
+         // set mPDF properties on the fly
+        'options' => ['title' => 'Krajee Report Title'],
+         // call mPDF methods on the fly
+        'methods' => [ 
+            'SetHeader'=>['Отчет'], 
+            'SetFooter'=>['{PAGENO}'],
+        ]
+    ]);
+
     $p = $pdf->render();
     $len = strlen($p);
     Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;

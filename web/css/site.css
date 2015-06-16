@@ -96,12 +96,27 @@ a.desc:after {
 }
 form{display:block;}
 aside{display:block;}
+.btn{
+    background: none;
+    text-decoration: none;
+}
+.btn:hover i{
+    color: grey;
+}
+.btn:hover{
+    color: grey;
+}
+a.btn{
+    color:black;
+}
 }
 @media print{
     body{
         font-family: 'TimesNewRoman'; 
         background-color: none;
         font-size: 14pt;
+    }
+    a{display: none;
     }
     form{display:none;}
     table{margin-left: -150px;}

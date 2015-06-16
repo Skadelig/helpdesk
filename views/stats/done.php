@@ -1,9 +1,9 @@
 <?php 
 	use yii\helpers\Html;
 	use yii\grid\GridView;
-	
+	use yii\helpers\Url;
 
-	$this->title = 'Статистика';
+	$this->title = 'Выполнено';
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	$param = $model->findStatsdone();
@@ -14,17 +14,20 @@
 				window.print() ; 
 				} 
 	</script> 
-	<form> 
-			<input TYPE="button" CLASS="for" VALUE="Печать" onClick="printit()"> 
+	<form class="report"> 
+			<button class="btn" onclick="printit()"><i class="fa fa-print fa-2x"></i><br>Печать</button>
+			<a href="<?=URL::to(['stats/reportdone'])?>" class="btn"><i class="fa fa-file-pdf-o fa-2x"></i>
+			<br>PDF</a>
 	</form>
 
 	 <div class="box">
-		<table class="table table-striped table-bordered">
-		<thead>
-			<th>Текст</th>
-			<th>Дата создания</th>
-			<th>Дата выполнения</th>
-		</thead>
+
+		<table class="table table-striped table-bordered" >
+		<tr>
+			<td>Текст</td>
+			<td>Дата создания</td>
+			<td>Дата выполнения</td>
+		</tr>
 			<?php
 			foreach ($param as $value) 
 			{

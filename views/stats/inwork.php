@@ -1,34 +1,35 @@
 <?php 
 	use yii\helpers\Html;
 	use yii\grid\GridView;
+		use yii\helpers\Url;
+
 	
-	$this->title = 'Статистика';
+	$this->title = 'В работе';
 	$this->params['breadcrumbs'][] = $this->title;
 	
 	$param = $model->findStatsinwork();
 	?>
-	
-		 <!-- <p>
-      	  <?= Html::a('Печать', ['update', 'id', ['class' => 'btn btn-primary']]) ?> 
-  		</p> -->
-
 		<SCRIPT Language="Javascript"> 
 				function printit(){ 
 				window.print() ; 
 				} 
 		</script> 
-<form> 
-<input TYPE="button" CLASS="for" VALUE="распечатать страницу" onClick="printit()"> 
-</form>
+
+		<form class="report"> 
+			<button class="btn" onclick="printit()"><i class="fa fa-print fa-2x"></i><br>Печать</button>
+			<a href="<?=URL::to(['stats/reportinwork'])?>" class="btn"><i class="fa fa-file-pdf-o fa-2x"></i>
+			<br>PDF</a>
+	</form>
+	
 
 	
 	<div class="box">
 		<table class="table table-striped table-bordered">
-		<thead>
-			<th>Текст</th>
-			<th>Дата создания</th>
-			<th>Дата выполнения</th>
-		</thead>
+		<tr>
+			<td>Текст</td>
+			<td>Дата создания</td>
+			<td>Дата выполнения</td>
+		</tr>
 			<?php
 			foreach ($param as $value) {
 				 if($value->Request_date)	$Request_date = \Datetime::createFromFormat('Y-m-d H:i:s', $value->Request_date)->format('d-m-Y H:i:s');

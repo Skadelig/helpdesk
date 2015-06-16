@@ -1,7 +1,7 @@
 <?php 
 	use yii\helpers\Html;
 	use yii\grid\GridView;
-	use kartik\export\ExportMenu; 
+	
 
 	$this->title = 'Статистика';
 	$this->params['breadcrumbs'][] = $this->title;
@@ -17,12 +17,7 @@
 	<form> 
 			<input TYPE="button" CLASS="for" VALUE="Печать" onClick="printit()"> 
 	</form>
-	<?php
-	echo ExportMenu::widget([
-		'dataProvider'=>$dataProvider, 
-		
-	 	'fontAwesome'=>true, 
-	]); ?>
+
 	 <div class="box">
 		<table class="table table-striped table-bordered">
 		<thead>
